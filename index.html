@@ -1,0 +1,2188 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width">
+  <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"> -->
+  <title>Blanchard Художественная галерея</title>
+
+  <link rel="icon" type="image/png" href="img/Blanchard.png">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/choices.min.css">
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="https://unpkg.com/simplebar@latest/dist/simplebar.css">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body class="body">
+
+  <!-- SVG -->
+  <svg style="display: none;">
+    <symbol id="corner" viewbox="0 0 12 7" fill="none">
+      <path d="M11 1L6 6L1 1" />
+    </symbol>
+    <symbol id="big-corner" viewbox="0 0 18 11" fill="none">
+      <path d="M17.3333 9.66666L9 1.33333L0.666664 9.66666" stroke="black" />
+    </symbol>
+  </svg>
+
+  <!-- HEADER -->
+
+  <header class="header">
+    <div class="header__top">
+      <div class="container header__top_container">
+        <button class="burger-btn" id="burger" aria-label="раскрытие меню">
+          <span class="burger-btn__line burger-btn__line_top"></span>
+          <span class="burger-btn__line burger-btn__line_middle"></span>
+          <span class="burger-btn__line burger-btn__line_bottom"></span>
+        </button>
+        <a href="" class="logo header__logo" aria-label="Логотип сайта">
+          <img src="img/logo.svg" alt="Blanchard" class="logo-img">
+        </a>
+        <div class="header__top_links">
+          <nav class="nav">
+            <ul class="nav__list" aria-label="Навигационный список">
+              <li class="nav__item">
+                <a href="#about" class="nav__link">
+                  О нас
+                </a>
+              </li>
+              <li class="nav__item">
+                <a href="#gallery" class="nav__link">
+                  Галерея
+                </a>
+              </li>
+              <li class="nav__item">
+                <a href="#catalog" class="nav__link">
+                  Каталог
+                </a>
+              </li>
+              <li class="nav__item">
+                <a href="#events" class="nav__link">
+                  События
+                </a>
+              </li>
+              <li class="nav__item">
+                <a href="#editions" class="nav__link">
+                  Издания
+                </a>
+              </li>
+              <li class="nav__item">
+                <a href="#projects" class="nav__link">
+                  Проекты
+                </a>
+              </li>
+              <li class="nav__item">
+                <a href="#contacts" class="nav__link">
+                  Контакты
+                </a>
+              </li>
+            </ul>
+          </nav>
+          <a href="" class="enter-link">Войти</a>
+        </div>
+        <button class="search-btn call-form-btn" id="call-form-btn">
+          <svg width="23" height="22" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="6.8678" height="1.71695"
+              transform="matrix(-0.718931 0.695081 0.718931 0.695081 4.9375 15.6534)" fill="white" />
+            <path fill-rule="evenodd" clip-rule="evenodd"
+              d="M12.0969 18C7.53041 18 3.99692 14.3229 3.99692 10C3.99692 5.67715 7.53041 2 12.0969 2C16.6634 2 20.1969 5.67715 20.1969 10C20.1969 14.3229 16.6634 18 12.0969 18ZM12.0969 20C6.57408 20 2.09692 15.5228 2.09692 10C2.09692 4.47715 6.57408 0 12.0969 0C17.6198 0 22.0969 4.47715 22.0969 10C22.0969 15.5228 17.6198 20 12.0969 20Z"
+              fill="white" />
+          </svg>
+        </button>
+      </div>
+    </div>
+    <div class="header__bottom">
+      <div class="container header__bottom_container">
+        <ul class="scrollbar-nav" aria-label="Список направлений">
+          <li class="scrollbar-nav__item" data-path="real" tabindex="0">
+            Реализм
+            <svg class="corner">
+              <use xlink:href="#corner"></use>
+            </svg>
+            <div class="scrollbar__box" data-target="real">
+              <ul class="scrollbar__box_list" data-simplebar>
+                <li class="scrollbar__box_item">
+                  <a href="" class="scrollbar__link"
+                    style="background-image: url(img/header/tintoreto.jpg);">Тинторетто</a>
+                </li>
+                <li class="scrollbar__box_item">
+                  <a href="" class="scrollbar__link" style="background-image: url(img/header/fridrich.jpg);">Фридрих</a>
+                </li>
+                <li class="scrollbar__box_item">
+                  <a href="" class="scrollbar__link"
+                    style="background-image: url(img/header/leonardo.jpg);">Леонардо</a>
+                </li>
+                <li class="scrollbar__box_item">
+                  <a href="" class="scrollbar__link"
+                    style="background-image: url(img/header/verrokcho.jpg);">Верроккьо</a>
+                </li>
+                <li class="scrollbar__box_item">
+                  <a href="" class="scrollbar__link"
+                    style="background-image: url(img/header/tintoreto.jpg);">Тинторетто</a>
+                </li>
+                <li class="scrollbar__box_item">
+                  <a href="" class="scrollbar__link" style="background-image: url(img/header/fridrich.jpg);">Фридрих</a>
+                </li>
+                <li class="scrollbar__box_item">
+                  <a href="" class="scrollbar__link"
+                    style="background-image: url(img/header/leonardo.jpg);">Леонардо</a>
+                </li>
+                <li class="scrollbar__box_item">
+                  <a href="" class="scrollbar__link"
+                    style="background-image: url(img/header/verrokcho.jpg);">Верроккьо</a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="scrollbar-nav__item" data-path="impres" tabindex="0">
+            Импрессионизм
+            <svg class="corner">
+              <use xlink:href="#corner"></use>
+            </svg>
+            <div class="scrollbar__box" data-target="impres">
+              <ul class="scrollbar__box_list" data-simplebar>
+                <li class="scrollbar__box_item">
+                  <a href="" class="scrollbar__link" style="background-image: url(img/header/mone.jpg);">Моне</a>
+                </li>
+                <li class="scrollbar__box_item">
+                  <a href="" class="scrollbar__link" style="background-image: url(img/header/sisley.jpg);">Сислей</a>
+                </li>
+                <li class="scrollbar__box_item">
+                  <a href="" class="scrollbar__link" style="background-image: url(img/header/mane.jpg);">Мане</a>
+                </li>
+                <li class="scrollbar__box_item">
+                  <a href="" class="scrollbar__link" style="background-image: url(img/header/renuar.jpg);">Ренуар</a>
+                </li>
+                <li class="scrollbar__box_item">
+                  <a href="" class="scrollbar__link" style="background-image: url(img/header/mone.jpg);">Моне</a>
+                </li>
+                <li class="scrollbar__box_item">
+                  <a href="" class="scrollbar__link" style="background-image: url(img/header/sisley.jpg);">Сислей</a>
+                </li>
+                <li class="scrollbar__box_item">
+                  <a href="" class="scrollbar__link" style="background-image: url(img/header/mane.jpg);">Мане</a>
+                </li>
+                <li class="scrollbar__box_item">
+                  <a href="" class="scrollbar__link" style="background-image: url(img/header/renuar.jpg);">Ренуар</a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="scrollbar-nav__item" data-path="postimpress" tabindex="0">
+            Постимпрессионизм
+            <svg class="corner">
+              <use xlink:href="#corner"></use>
+            </svg>
+            <div class="scrollbar__box" data-target="postimpress">
+              <ul class="scrollbar__box_list" data-simplebar>
+                <li class="scrollbar__box_item">
+                  <a href="" class="scrollbar__link" style="background-image: url(img/header/vanGog.jpg);">Ван Гог</a>
+                </li>
+                <li class="scrollbar__box_item">
+                  <a href="" class="scrollbar__link" style="background-image: url(img/header/sezann.jpg);">Сезанн</a>
+                </li>
+                <li class="scrollbar__box_item">
+                  <a href="" class="scrollbar__link" style="background-image: url(img/header/gogen.jpg);">Гоген</a>
+                </li>
+                <li class="scrollbar__box_item">
+                  <a href="" class="scrollbar__link" style="background-image: url(img/header/sera.jpg);">Сёра</a>
+                </li>
+                <li class="scrollbar__box_item">
+                  <a href="" class="scrollbar__link" style="background-image: url(img/header/vanGog.jpg);">Ван Гог</a>
+                </li>
+                <li class="scrollbar__box_item">
+                  <a href="" class="scrollbar__link" style="background-image: url(img/header/sezann.jpg);">Сезанн</a>
+                </li>
+                <li class="scrollbar__box_item">
+                  <a href="" class="scrollbar__link" style="background-image: url(img/header/gogen.jpg);">Гоген</a>
+                </li>
+                <li class="scrollbar__box_item">
+                  <a href="" class="scrollbar__link" style="background-image: url(img/header/sera.jpg);">Сёра</a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="scrollbar-nav__item" data-path="avang" tabindex="0">
+            Авангард
+            <svg class="corner">
+              <use xlink:href="#corner"></use>
+            </svg>
+            <div class="scrollbar__box" data-target="avang">
+              <ul class="scrollbar__box_list" data-simplebar>
+                <li class="scrollbar__box_item">
+                  <a href="" class="scrollbar__link"
+                    style="background-image: url(img/header/kandinski.jpg);">Кандинский</a>
+                </li>
+                <li class="scrollbar__box_item">
+                  <a href="" class="scrollbar__link"
+                    style="background-image: url(img/header/marinetti.jpg);">Маринетти</a>
+                </li>
+                <li class="scrollbar__box_item">
+                  <a href="" class="scrollbar__link" style="background-image: url(img/header/malevich.jpg);">Малевич</a>
+                </li>
+                <li class="scrollbar__box_item">
+                  <a href="" class="scrollbar__link" style="background-image: url(img/header/pikasso.jpg);">Пикассо</a>
+                </li>
+                <li class="scrollbar__box_item">
+                  <a href="" class="scrollbar__link"
+                    style="background-image: url(img/header/kandinski.jpg);">Кандинский</a>
+                </li>
+                <li class="scrollbar__box_item">
+                  <a href="" class="scrollbar__link"
+                    style="background-image: url(img/header/marinetti.jpg);">Маринетти</a>
+                </li>
+                <li class="scrollbar__box_item">
+                  <a href="" class="scrollbar__link" style="background-image: url(img/header/malevich.jpg);">Малевич</a>
+                </li>
+                <li class="scrollbar__box_item">
+                  <a href="" class="scrollbar__link" style="background-image: url(img/header/pikasso.jpg);">Пикассо</a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="scrollbar-nav__item" data-path="future" tabindex="0">
+            Футуризм
+            <svg class="corner">
+              <use xlink:href="#corner"></use>
+            </svg>
+            <div class="scrollbar__box" data-target="future">
+              <ul class="scrollbar__box_list" data-simplebar>
+                <li class="scrollbar__box_item">
+                  <a href="" class="scrollbar__link" style="background-image: url(img/header/karra.jpg);">Карра</a>
+                </li>
+                <li class="scrollbar__box_item">
+                  <a href="" class="scrollbar__link"
+                    style="background-image: url(img/header/pratella.jpg);">Прателла</a>
+                </li>
+                <li class="scrollbar__box_item">
+                  <a href="" class="scrollbar__link"
+                    style="background-image: url(img/header/severini.jpg);">Северини</a>
+                </li>
+                <li class="scrollbar__box_item">
+                  <a href="" class="scrollbar__link" style="background-image: url(img/header/balla.jpg);">Балла</a>
+                </li>
+                <li class="scrollbar__box_item">
+                  <a href="" class="scrollbar__link" style="background-image: url(img/header/karra.jpg);">Карра</a>
+                </li>
+                <li class="scrollbar__box_item">
+                  <a href="" class="scrollbar__link"
+                    style="background-image: url(img/header/pratella.jpg);">Прателла</a>
+                </li>
+                <li class="scrollbar__box_item">
+                  <a href="" class="scrollbar__link"
+                    style="background-image: url(img/header/severini.jpg);">Северини</a>
+                </li>
+                <li class="scrollbar__box_item">
+                  <a href="" class="scrollbar__link" style="background-image: url(img/header/balla.jpg);">Балла</a>
+                </li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+        <form method="get" class="search-form" aria-label="поиск по сайту">
+          <button type="submit" class="search-btn" aria-label="Запустить поиск">
+            <svg width="23" height="22" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect width="6.8678" height="1.71695"
+                transform="matrix(-0.718931 0.695081 0.718931 0.695081 4.9375 15.6534)" fill="white" />
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M12.0969 18C7.53041 18 3.99692 14.3229 3.99692 10C3.99692 5.67715 7.53041 2 12.0969 2C16.6634 2 20.1969 5.67715 20.1969 10C20.1969 14.3229 16.6634 18 12.0969 18ZM12.0969 20C6.57408 20 2.09692 15.5228 2.09692 10C2.09692 4.47715 6.57408 0 12.0969 0C17.6198 0 22.0969 4.47715 22.0969 10C22.0969 15.5228 17.6198 20 12.0969 20Z"
+                fill="white" />
+            </svg>
+          </button>
+          <label class="form__label">
+            <input type="text" placeholder="Поиск по сайту" class="search-input">
+          </label>
+          <button class="close-form-btn" id="close-form-btn" type="button">
+            <svg class="form-cross-1020" width="29" height="29" viewbox="0 0 29 29" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <g opacity="0.7">
+                <rect width="37.2801" height="3.72801"
+                  transform="matrix(0.707093 0.707121 -0.707093 0.707121 2.63867 0)" fill="white" />
+                <rect width="37.2801" height="3.72801"
+                  transform="matrix(0.707093 -0.707121 0.707093 0.707121 -0.000976562 26.3615)" fill="white" />
+              </g>
+            </svg>
+            <svg class="form-cross-610" width="15" height="15" viewbox="0 0 15 15" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <rect width="19.2824" height="1.92824"
+                transform="matrix(0.707093 0.707121 -0.707093 0.707121 1.36523 0.00152588)" fill="white" />
+              <rect width="19.2824" height="1.92824" transform="matrix(0.707093 -0.707121 0.707093 0.707121 0 13.6365)"
+                fill="white" />
+            </svg>
+          </button>
+        </form>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO -->
+
+  <section class="hero">
+    <div class="hero__swiper-container swiper-container">
+      <div class="swiper-wrapper hero__swiper-wrapper">
+        <div class="swiper-slide_first hero__swiper-slide swiper-slide">
+          <!-- bg image -->
+        </div>
+        <div class="swiper-slide_second hero__swiper-slide swiper-slide">
+          <!-- bg image -->
+        </div>
+        <div class="swiper-slide_third hero__swiper-slide swiper-slide">
+          <!-- bg image -->
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="hero__content">
+        <h1 class="hero__heading">
+          Прикоснитесь к прекрасному
+        </h1>
+        <p class="paragraph hero__paragraph">
+          Мы вынуждены отталкиваться от того, что <br class="br" /> реализация намеченных плановых заданий <br
+            class="br" /> создаёт предпосылки для новых <br class="br" />
+          предложений.
+        </p>
+        <button class="btn hero__btn">
+          Подписаться на рассылку
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+
+  <section class="about" id="about">
+    <div class="container about__container">
+      <h2 class="section-heading about__heading">
+        О нас
+      </h2>
+      <p class="paragraph about__paragraph">
+        Ясность нашей позиции очевидна: семантический разбор внешних противодействий однозначно определяет каждого
+        участника как способного принимать собственные решения касаемо распределения внутренних резервов и ресурсов. Не
+        следует, однако, забывать, что высококачественный прототип будущего проекта влечет за собой процесс внедрения и
+        модернизации модели развития. Повседневная практика показывает, что высокое качество позиционных исследований
+        создаёт необходимость включения в производственный план целого ряда внеочередных мероприятий с учётом комплекса
+        распределения внутренних резервов и ресурсов. В рамках спецификации современных стандартов, действия
+        представителей оппозиции набирают популярность среди определенных слоев населения, а значит, должны быть
+        разоблачены.
+      </p>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+
+  <section class="gallery" id="gallery">
+    <div class="container gallery__container">
+      <div class="gallery__left">
+        <h2 class="section-heading gallery__heading">
+          Галерея
+        </h2>
+        <div class="select-container">
+          <span class="select-label">Фильтр:</span>
+          <select name="select" class="js-choice">
+            <option value="">
+              Живопись
+            </option>
+            <option value="">
+              Рисунок
+            </option>
+            <option value="">
+              Скульптура
+            </option>
+          </select>
+        </div>
+        <p class="paragraph gallery__paragraph gallery__paragraph_block">
+          Вам предоставляется 10 бесплатных скачиваний. Для увеличения количества скачиваний <a href=""
+            class="log-in-link">авторизуйтесь</a>, либо воспользуйтесь лицензией.
+        </p>
+      </div>
+      <div class="gallery__right">
+        <div class="gallery__swiper-container swiper">
+          <div class="swiper-controls">
+            <div class="swiper-button-style swiper-button-prev-style gallery-swiper-button-prev swiper-button-prev">
+              <svg class="corner">
+                <use xlink:href="#corner"></use>
+              </svg>
+            </div>
+            <div class="swiper-pagination-style gallery-swiper-pagination"></div>
+            <div class="swiper-button-style swiper-button-next-style gallery-swiper-button-next swiper-button-next">
+              <svg class="corner">
+               <use xlink:href="#corner"></use>
+              </svg>
+            </div>
+          </div>
+          <ul class="swiper-wrapper gallery__swiper-wrapper" aria-label="Галерея картин">
+            <li class="gallery__swiper-slide swiper-slide" tabindex="0" data-path="yellow">
+
+              <img src="img/gallery/1gal1920.jpg" class="gallery__slide-img" alt="Картина">
+
+            </li>
+            <li class="gallery__swiper-slide swiper-slide" tabindex="0" data-path="green">
+
+              <img src="img/gallery/2gal1920.jpg" class="gallery__slide-img" alt="Картина">
+
+            </li>
+            <li class="gallery__swiper-slide swiper-slide" tabindex="0" data-path="womanRake">
+
+              <img src="img/gallery/3gal1920.jpg" class="gallery__slide-img" alt="Малевич, Женщина с граблями">
+
+            </li>
+            <li class="gallery__swiper-slide swiper-slide" tabindex="0" data-path="orange">
+
+              <img src="img/gallery/4gal1920.jpg" class="gallery__slide-img" alt="Картина">
+
+            </li>
+            <li class="gallery__swiper-slide swiper-slide" tabindex="0">
+
+              <img src="img/gallery/5gal1920.jpg" class="gallery__slide-img" alt="Картина">
+
+            </li>
+            <li class="gallery__swiper-slide swiper-slide" tabindex="0">
+
+              <img src="img/gallery/6gal1920.jpg" class="gallery__slide-img" alt="Картина">
+
+            </li>
+            <li class="gallery__swiper-slide swiper-slide" tabindex="0">
+
+              <img src="img/gallery/7gal1920.jpg" class="gallery__slide-img" alt="Картина">
+
+            </li>
+            <li class="gallery__swiper-slide swiper-slide" tabindex="0">
+
+              <img src="img/gallery/8gal1920.jpg" class="gallery__slide-img" alt="Картина">
+
+            </li>
+            <li class="gallery__swiper-slide swiper-slide" tabindex="0">
+
+              <img src="img/gallery/9gal1920.jpg" class="gallery__slide-img" alt="Картина">
+
+            </li>
+            <li class="gallery__swiper-slide swiper-slide" tabindex="0">
+
+              <img src="img/gallery/10gal1920.jpg" class="gallery__slide-img" alt="Картина">
+
+            </li>
+            <li class="gallery__swiper-slide swiper-slide" tabindex="0">
+
+              <img src="img/gallery/11gal1920.jpg" class="gallery__slide-img" alt="Картина">
+
+            </li>
+            <li class="gallery__swiper-slide swiper-slide" tabindex="0">
+
+              <img src="img/gallery/12gal1920.jpg" class="gallery__slide-img" alt="Картина">
+
+            </li>
+            <li class="gallery__swiper-slide swiper-slide" tabindex="0">
+
+              <img src="img/gallery/13gal1920.jpg" class="gallery__slide-img" alt="Картина">
+
+            </li>
+            <li class="gallery__swiper-slide swiper-slide" tabindex="0">
+
+              <img src="img/gallery/14gal1920.jpg" class="gallery__slide-img" alt="Картина">
+
+            </li>
+            <li class="gallery__swiper-slide swiper-slide" tabindex="0">
+
+              <img src="img/gallery/15gal1920.jpg" class="gallery__slide-img" alt="Картина">
+
+            </li>
+            <li class="gallery__swiper-slide swiper-slide" tabindex="0">
+
+              <img src="img/gallery/16gal1920.jpg" class="gallery__slide-img" alt="Картина">
+
+            </li>
+            <li class="gallery__swiper-slide swiper-slide" tabindex="0">
+
+              <img src="img/gallery/17gal1920.jpg" class="gallery__slide-img" alt="Картина">
+
+            </li>
+            <li class="gallery__swiper-slide swiper-slide" tabindex="0">
+
+              <img src="img/gallery/18gal1920.jpg" class="gallery__slide-img" alt="Картина">
+
+            </li>
+            <li class="gallery__swiper-slide swiper-slide" tabindex="0">
+
+              <img src="img/gallery/19gal1920.jpg" class="gallery__slide-img" alt="Картина">
+
+            </li>
+            <li class="gallery__swiper-slide swiper-slide" tabindex="0">
+
+              <img src="img/gallery/20gal1920.jpg" class="gallery__slide-img" alt="Картина">
+
+            </li>
+            <li class="gallery__swiper-slide swiper-slide" tabindex="0">
+
+              <img src="img/gallery/21gal1920.jpg" class="gallery__slide-img" alt="Картина">
+
+            </li>
+            <li class="gallery__swiper-slide swiper-slide" tabindex="0">
+
+              <img src="img/gallery/22gal1920.jpg" class="gallery__slide-img" alt="Картина">
+
+            </li>
+            <li class="gallery__swiper-slide swiper-slide" tabindex="0">
+
+              <img src="img/gallery/23gal1920.jpg" class="gallery__slide-img" alt="Картина">
+
+            </li>
+            <li class="gallery__swiper-slide swiper-slide" tabindex="0">
+
+              <img src="img/gallery/24gal1920.jpg" class="gallery__slide-img" alt="Картина">
+
+            </li>
+          </ul>
+
+        </div>
+      </div>
+      <p class="paragraph gallery__paragraph gallery__paragraph_none">
+        Вам предоставляется 10 бесплатных скачиваний. Для увеличения количества скачиваний <a href=""
+          class="log-in-link">авторизуйтесь</a>, либо воспользуйтесь лицензией.
+      </p>
+      <div class="modals">
+        <div class="modal" data-target="yellow" tabindex="0">
+          <div class="modal__content">
+            <picture class="modal__picture">
+              <source media="(max-width: 760px)" srcset="img/gallery/modal/320.jpg">
+              <source media="(max-width: 1020px)" srcset="img/gallery/modal/768.jpg">
+              <source media="(max-width: 1250px)" srcset="img/gallery/modal/1024.jpg">
+              <img src="img/gallery/modal/1920.jpg" alt="">
+            </picture>
+            <div class="modal__text">
+              <h3 class="modal__title">
+                <span class="modal__title_main">Казимир Малевич</span>
+                <span class="modal__title_secondary">"Спина женщины"</span>
+              </h3>
+              <span class="modal__title_mark">
+                1931-1932
+              </span>
+              <p class="paragraph modal__paragraph">
+                Картина из второй серии крестьянского цикла работ Казимира Малевича. Художник принялся за её создание в
+                1930-1931 годах, после того, как первый цикл был утерян после Берлинской и Варшавской выставок в 1927
+                году.
+              </p>
+              <button class="modal__cross-btn" с aria-label="закрыть">
+                <span class="line line-one"></span>
+                <span class="line line-two"></span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal" data-target="green">
+        <div class="modal__content">
+          <picture class="modal__picture">
+            <source media="(max-width: 760px)" srcset="img/gallery/modal/320.jpg">
+            <source media="(max-width: 1020px)" srcset="img/gallery/modal/768.jpg">
+            <source media="(max-width: 1250px)" srcset="img/gallery/modal/1024.jpg">
+            <img src="img/gallery/modal/1920.jpg" alt="">
+          </picture>
+          <div class="modal__text">
+            <h3 class="modal__title">
+              <span class="modal__title_main">Казимир Малевич</span>
+              <span class="modal__title_secondary">"Дама на остановке"</span>
+            </h3>
+            <span class="modal__title_mark">
+              1931-1932
+            </span>
+            <p class="paragraph modal__paragraph">
+              Картина из второй серии крестьянского цикла работ Казимира Малевича. Художник принялся за её создание в
+              1930-1931 годах, после того, как первый цикл был утерян после Берлинской и Варшавской выставок в 1927
+              году.
+            </p>
+            <button class="modal__cross-btn">
+              <span class="line line-one"></span>
+              <span class="line line-two"></span>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="modal" data-target="orange">
+        <div class="modal__content">
+          <picture class="modal__picture">
+            <source media="(max-width: 760px)" srcset="img/gallery/modal/320.jpg">
+            <source media="(max-width: 1020px)" srcset="img/gallery/modal/768.jpg">
+            <source media="(max-width: 1250px)" srcset="img/gallery/modal/1024.jpg">
+            <img src="img/gallery/modal/1920.jpg" alt="">
+          </picture>
+          <div class="modal__text">
+            <h3 class="modal__title">
+              <span class="modal__title_main">Казимир Малевич</span>
+              <span class="modal__title_secondary">"Женщина с ведрами"</span>
+            </h3>
+            <span class="modal__title_mark">
+              1931-1932
+            </span>
+            <p class="paragraph modal__paragraph">
+              Картина из второй серии крестьянского цикла работ Казимира Малевича. Художник принялся за её создание в
+              1930-1931 годах, после того, как первый цикл был утерян после Берлинской и Варшавской выставок в 1927
+              году.
+            </p>
+            <button class="modal__cross-btn">
+              <span class="line line-one"></span>
+              <span class="line line-two"></span>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="modal" data-target="womanRake">
+        <div class="modal__content">
+          <picture class="modal__picture">
+            <source media="(max-width: 760px)" srcset="img/gallery/modal/320.jpg">
+            <source media="(max-width: 1020px)" srcset="img/gallery/modal/768.jpg">
+            <source media="(max-width: 1250px)" srcset="img/gallery/modal/1024.jpg">
+            <img src="img/gallery/modal/1920.jpg" alt="">
+          </picture>
+          <div class="modal__text">
+            <h3 class="modal__title">
+              <span class="modal__title_main">Казимир Малевич</span>
+              <span class="modal__title_secondary">"Женщина с граблями"</span>
+            </h3>
+            <span class="modal__title_mark">
+              1931-1932
+            </span>
+            <p class="paragraph modal__paragraph">
+              Картина из второй серии крестьянского цикла работ Казимира Малевича. Художник принялся за её создание в
+              1930-1931 годах, после того, как первый цикл был утерян после Берлинской и Варшавской выставок в 1927
+              году.
+            </p>
+            <button class="modal__cross-btn">
+              <span class="line line-one"></span>
+              <span class="line line-two"></span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CATALOG -->
+
+  <section class="catalog" id="catalog">
+    <div class="container catalog__container">
+      <div class="catalog__header">
+        <div class="catalog__title">
+          <div class="heading-langs">
+            <h2 class="section-heading catalog__heading lang-text is-active-lang-text" data-target="rus">
+              Каталог</h2>
+            <h2 class="section-heading catalog__heading lang-text" data-target="fra">Catalogue</h2>
+            <h2 class="section-heading catalog__heading lang-text" data-target="deu">Katalog</h2>
+            <h2 class="section-heading catalog__heading lang-text" data-target="ita">Catalogare</h2>
+            <h2 class="section-heading catalog__heading lang-text" data-target="bel">Catalogus</h2>
+          </div>
+          <ul class="tabs-lang" aria-label="Выбрать язык раздела">
+            <li class="tabs-lang__item">
+              <button id="fra" class="tabs-lang__btn translate" data-path="fra">
+                <img src="img/catalog/fra.png" alt="Французский язык">
+              </button>
+            </li>
+            <li class="tabs-lang__item">
+              <button id="deu" class="tabs-lang__btn translate" data-path="deu">
+                <img src="img/catalog/deu.png" alt="Немецкий язык">
+              </button>
+            </li>
+            <li class="tabs-lang__item">
+              <button id="ita" class="tabs-lang__btn translate" data-path="ita">
+                <img src="img/catalog/ita.png" alt="Итальянский язык">
+              </button>
+            </li>
+            <li class="tabs-lang__item">
+              <button id="rus" class="tabs-lang__btn translate is-active-lang-btn" data-path="rus">
+                <img src="img/catalog/rus.png" alt="русский язык">
+              </button>
+            </li>
+            <li class="tabs-lang__item">
+              <button id="bel" class="tabs-lang__btn translate" data-path="bel">
+                <img src="img/catalog/bel.png" alt="Бельгийский язык">
+              </button>
+            </li>
+          </ul>
+        </div>
+        <div class="paragraphs-lang">
+          <p class="paragraph catalog__paragraph lang-text is-active-lang-text" data-target="rus">
+            Акционеры крупнейших компаний, которые представляют собой яркий пример континентально-европейского типа
+            политической культуры, будут объявлены нарушающими общечеловеческие нормы этики и морали. Являясь всего лишь
+            частью общей картины, стремящиеся вытеснить традиционное производство, нанотехнологии и по сей день остаются
+            уделом либералов, которые жаждут быть функционально разнесены на независимые элементы.
+          </p>
+          <p class="paragraph catalog__paragraph lang-text" data-target="fra">
+            Les actionnaires des plus grandes entreprises, qui représentent un exemple frappant du type de culture
+            politique de l Europe continentale, seront déclarés violant les normes universelles d éthique et de
+            moralité. En tant que partie seulement du tableau d ensemble, cherchant à supplanter la fabrication
+            traditionnelle, la nanotechnologie reste à ce jour le lot des libéraux désireux d être fonctionnellement
+            dispersés en éléments indépendants.
+          </p>
+          <p class="paragraph catalog__paragraph lang-text" data-target="deu">
+            Den Aktionären der größten Unternehmen, die ein anschauliches Beispiel für die kontinentaleuropäische
+            politische Kultur darstellen, wird erklärt, dass sie gegen die universellen Normen der Ethik und Moral
+            verstoßen. Als nur ein Teil des großen Ganzen, der die traditionelle Fertigung zu ersetzen sucht, bleibt die
+            Nanotechnologie bis heute das Los der Liberalen, die bestrebt sind, funktional in unabhängige Elemente
+            aufgeteilt zu werden.
+          </p>
+          <p class="paragraph catalog__paragraph lang-text" data-target="ita">
+            Gli azionisti delle maggiori società, che rappresentano un vivido esempio della cultura politica di tipo
+            continentale europeo, saranno dichiarati violatori delle norme universali di etica e morale. Essendo solo
+            una parte del quadro generale, che cerca di soppiantare la produzione tradizionale, la nanotecnologia rimane
+            fino ad oggi il destino dei liberali desiderosi di essere funzionalmente dispersi in elementi indipendenti.
+          </p>
+          <p class="paragraph catalog__paragraph lang-text" data-target="bel">
+            De aandeelhouders van de grootste bedrijven, die een levendig voorbeeld zijn van het continentale Europese
+            type politieke cultuur, zullen worden verklaard in strijd met de universele normen van ethiek en moraliteit.
+            Als slechts een deel van het grote geheel, dat de traditionele productie wil vervangen, blijft
+            nanotechnologie tot op de dag van vandaag het lot van liberalen die graag functioneel worden verspreid in
+            onafhankelijke elementen.
+          </p>
+        </div>
+      </div>
+      <div class="catalog__body">
+        <div class="catalog__left" id="catalog-artist">
+          <article class="tabs__content tabs__content_active" data-target="ghirland">
+            <div class="tabs__photo">
+              <img src="img/catalog/Ghirlandaio.jpg" alt="ghirlandaio" class="photo-img">
+            </div>
+            <div class="lang-titles">
+              <h3 class="tabs__title lang-text is-active-lang-text" data-target="rus">
+                Доменико Гирландайо
+              </h3>
+              <h3 class="tabs__title lang-text" data-target="fra">
+                Domenico Ghirlandaio
+              </h3>
+              <h3 class="tabs__title lang-text" data-target="deu">
+                Domenico Ghirlandaio
+              </h3>
+              <h3 class="tabs__title lang-text" data-target="ita">
+                Domenico Ghirlandaio
+              </h3>
+              <h3 class="tabs__title lang-text" data-target="bel">
+                Domenico Ghirlandaio
+              </h3>
+            </div>
+            <div class="lang-labels">
+              <span class="tabs__label lang-text is-active-lang-text" data-target="rus">
+                2 июня 1448 — 11 января 1494.
+              </span>
+              <span class="tabs__label lang-text" data-target="fra">
+                2 juin 1448 - 11 janvier 1494.
+              </span>
+              <span class="tabs__label lang-text" data-target="deu">
+                2 juni 1448 - 11 januar 1494.
+              </span>
+              <span class="tabs__label lang-text" data-target="ita">
+                2 giugno 1448 - 11 gennaio 1494.
+              </span>
+              <span class="tabs__label lang-text" data-target="bel">
+                2 juni 1448 - 11 januari 1494.
+              </span>
+            </div>
+            <div class="lang-paragraphs">
+              <p class="paragraph tabs__paragraph lang-text is-active-lang-text" data-target="rus">
+                Один из ведущих флорентийских художников Кватроченто, основатель художественной династии, которую
+                продолжили его брат Давид и сын Ридольфо. Глава художественной мастерской, где юный Микеланджело в
+                течение
+                года овладевал профессиональными навыками. Автор фресковых циклов, в которых выпукло, со всевозможными
+                подробностями показана домашняя жизнь библейских персонажей (в их роли выступают знатные граждане
+                Флоренции в костюмах того времени).
+              </p>
+              <p class="paragraph tabs__paragraph lang-text" data-target="fra">
+                Lun des principaux peintres florentins Quattrocento, fondateur de la dynastie artistique, qui a été
+                poursuivie par son frère David et son fils Ridolfo. Chef de latelier dart, où le jeune Michel-Ange a
+                maîtrisé les compétences professionnelles pendant un an. Lauteur de cycles de fresques, dans lesquels la
+                vie familiale des personnages bibliques est représentée en convexe, avec toutes sortes de détails (dans
+                leur rôle se trouvent les nobles citoyens de Florence en costumes de cette époque).
+              </p>
+              <p class="paragraph tabs__paragraph lang-text" data-target="deu">
+                Einer der führenden Florentiner Maler Quattrocento, Begründer der Künstlerdynastie, die von seinem
+                Bruder David und seinem Sohn Ridolfo fortgeführt wurde. Leiter der Kunstwerkstatt, in der der junge
+                Michelangelo ein Jahr lang berufliche Fähigkeiten erlernte. Der Autor von Freskenzyklen, in denen das
+                häusliche Leben biblischer Gestalten konvex mit allerlei Details dargestellt wird (in ihrer Rolle sind
+                die adligen Bürger von Florenz in damaligen Kostümen).
+              </p>
+              <p class="paragraph tabs__paragraph lang-text" data-target="ita">
+                Uno dei maggiori pittori fiorentini del Quattrocento, capostipite della dinastia artistica, proseguita
+                dal fratello David e dal figlio Ridolfo. Responsabile della bottega d arte, dove il giovane Michelangelo
+                ha padroneggiato le abilità professionali per un anno. L autore di cicli di affreschi, in cui la vita
+                domestica dei personaggi biblici è mostrata in forma convessa, con ogni sorta di dettaglio (nel loro
+                ruolo sono i nobili cittadini di Firenze in costumi dell epoca).
+              </p>
+              <p class="paragraph tabs__paragraph lang-text" data-target="bel">
+                Een van de toonaangevende Florentijnse schilders Quattrocento, grondlegger van de artistieke dynastie,
+                die werd voortgezet door zijn broer David en zoon Ridolfo. Hoofd van het kunstatelier, waar de jonge
+                Michelangelo een jaar lang professionele vaardigheden onder de knie heeft. De auteur van fresco-cycli,
+                waarin het huiselijk leven van bijbelse personages in convex wordt weergegeven, met allerlei details (in
+                hun rol zijn de nobele burgers van Florence in kostuums van die tijd).
+              </p>
+            </div>
+          </article>
+          <article class="tabs__content" data-target="painter">
+            <div class="tabs__photo tabs__photo_empty">
+              <span class="tabs__photo_text lang-text is-active-lang-text" data-target="rus">Х - Художник</span>
+              <span class="tabs__photo_text lang-text" data-target="fra">А - Artiste</span>
+              <span class="tabs__photo_text lang-text" data-target="deu">K - Künstler</span>
+              <span class="tabs__photo_text lang-text" data-target="ita">A - Artista</span>
+              <span class="tabs__photo_text lang-text" data-target="bel">A - Artiest</span>
+            </div>
+            <div class="lang-titles">
+              <h3 class="tabs__title tabs__title_empty lang-text is-active-lang-text" data-target="rus">
+                Что мы о нем знаем?
+              </h3>
+              <h3 class="tabs__title tabs__title_empty lang-text" data-target="fra">
+                Que savons-nous de lui?
+              </h3>
+              <h3 class="tabs__title tabs__title_empty lang-text" data-target="deu">
+                Was wissen wir über ihn?
+              </h3>
+              <h3 class="tabs__title tabs__title_empty lang-text" data-target="ita">
+                Cosa sappiamo di lui?
+              </h3>
+              <h3 class="tabs__title tabs__title_empty lang-text" data-target="bel">
+                Wat weten we over hem?
+              </h3>
+            </div>
+            <div class="lang-paragraph">
+              <p class="paragraph tabs__paragraph tabs__paragraph_empty lang-text is-active-lang-text"
+                data-target="rus">
+                Пока ничего... Зато мы точно знаем, что в галерее есть на что посмотреть!
+              </p>
+              <p class="paragraph tabs__paragraph tabs__paragraph_empty lang-text" data-target="fra">
+                Rien pour linstant... Mais nous savons avec certitude quil y a quelque chose à voir dans la galerie!
+              </p>
+              <p class="paragraph tabs__paragraph tabs__paragraph_empty lang-text" data-target="deu">
+                Bisher noch nichts ... Aber wir wissen sicher, dass es in der Galerie etwas zu sehen gibt!
+              </p>
+              <p class="paragraph tabs__paragraph tabs__paragraph_empty lang-text" data-target="ita">
+                Finora niente... Ma sappiamo per certo che cè qualcosa da vedere nella galleria!
+              </p>
+              <p class="paragraph tabs__paragraph tabs__paragraph_empty lang-text" data-target="bel">
+                Tot nu toe niets... Maar we weten zeker dat er iets te zien is in de galerie!
+              </p>
+            </div>
+            <div class="lang-links">
+              <a href="#gallery" class="empty-link lang-text is-active-lang-text" data-target="rus">В галерею</a>
+              <a href="#gallery" class="empty-link lang-text" data-target="fra">To Gallery</a>
+              <a href="#gallery" class="empty-link lang-text" data-target="deu">Zur Galerie</a>
+              <a href="#gallery" class="empty-link lang-text" data-target="ita">Alla Galleria</a>
+              <a href="#gallery" class="empty-link lang-text" data-target="bel">Naar Galerij</a>
+            </div>
+          </article>
+        </div>
+        <div class="catalog__right">
+          <ul class="accordion" id="accordion">
+            <li class="accordion__item">
+              <div class="accordion__name">
+                <h3 class="accordion__heading">
+                  <span class="lang-text is-active-lang-text" data-target="rus">C 1400 по 1499 гг.</span>
+                  <span class="lang-text" data-target="fra">De 1400 à 1499</span>
+                  <span class="lang-text" data-target="deu">Von 1400 bis 1499</span>
+                  <span class="lang-text" data-target="ita">Dal 1400 al 1499</span>
+                  <span class="lang-text" data-target="bel">Van 1400 tot 1499</span>
+                </h3>
+                <div class="accordion__btn">
+                  <svg class="big-corner">
+                    <use xlink:href="#big-corner"></use>
+                  </svg>
+                </div>
+              </div>
+              <div class="accordion__content">
+                <ul class="tab-list" aria-label="Список художников">
+                  <li class="tab-item">
+                    <a href="#catalog-artist" class="tab-btn lang-text is-active-lang-text" data-path="painter"
+                      data-target="rus" tabindex="0">Бенедетто ди Биндо</a>
+                    <a href="#catalog-artist" class="tab-btn lang-text" data-path="painter" data-target="fra"
+                      tabindex="0">Benedetto di
+                      Bindo</a>
+                    <a href="#catalog-artist" class="tab-btn lang-text" data-path="painter" data-target="deu"
+                      tabindex="0">Benedetto di
+                      Bindo</a>
+                    <a href="#catalog-artist" class="tab-btn lang-text" data-path="painter" data-target="ita"
+                      tabindex="0">Benedetto di
+                      Bindo</a>
+                    <a href="#catalog-artist" class="tab-btn lang-text" data-path="painter" data-target="bel"
+                      tabindex="0">Benedetto di
+                      Bindo</a>
+                  </li>
+                  <li class="tab-item">
+                    <a href="#catalog-artist" class="tab-btn lang-text is-active-lang-text" data-path="painter"
+                      data-target="rus" tabindex="0">Бергоньоне, Амброджо</a>
+                    <a href="#catalog-artist" class="tab-btn lang-text" data-path="painter" data-target="fra"
+                      tabindex="0">Bergognone,
+                      Ambrogio</a>
+                    <a href="#catalog-artist" class="tab-btn lang-text" data-path="painter" data-target="deu"
+                      tabindex="0">Bergognone,
+                      Ambrogio</a>
+                    <a href="#catalog-artist" class="tab-btn lang-text" data-path="painter" data-target="ita"
+                      tabindex="0">Bergognone,
+                      Ambrogio</a>
+                    <a href="#catalog-artist" class="tab-btn lang-text" data-path="painter" data-target="bel"
+                      tabindex="0">Bergognone,
+                      Ambrogio</a>
+                  </li>
+                  <li class="tab-item">
+                    <a href="#catalog-artist" class="tab-btn lang-text is-active-lang-text" data-path="painter"
+                      data-target="rus" tabindex="0">Биссоло, Франческо</a>
+                    <a href="#catalog-artist" class="tab-btn lang-text" data-path="painter" data-target="fra"
+                      tabindex="0">Bissolo,
+                      Francesco</a>
+                    <a href="#catalog-artist" class="tab-btn lang-text" data-path="painter" data-target="deu"
+                      tabindex="0">Bissolo,
+                      Francesco</a>
+                    <a href="#catalog-artist" class="tab-btn lang-text" data-path="painter" data-target="ita"
+                      tabindex="0">Bissolo,
+                      Francesco</a>
+                    <a href="#catalog-artist" class="tab-btn lang-text" data-path="painter" data-target="bel"
+                      tabindex="0">Bissolo,
+                      Francesco</a>
+                  </li>
+                  <li class="tab-item">
+                    <a href="#catalog-artist" class="tab-btn lang-text is-active-lang-text" data-path="painter"
+                      data-target="rus" tabindex="0">Больтраффио, Джованни</a>
+                    <a href="#catalog-artist" class="tab-btn lang-text" data-path="painter" data-target="fra"
+                      tabindex="0">Boltraffio,
+                      Giovanni</a>
+                    <a href="#catalog-artist" class="tab-btn lang-text" data-path="painter" data-target="deu"
+                      tabindex="0">Boltraffio,
+                      Giovanni</a>
+                    <a href="#catalog-artist" class="tab-btn lang-text" data-path="painter" data-target="ita"
+                      tabindex="0">Boltraffio,
+                      Giovanni</a>
+                    <a href="#catalog-artist" class="tab-btn lang-text" data-path="painter" data-target="bel"
+                      tabindex="0">Boltraffio,
+                      Giovanni</a>
+                  </li>
+                  <li class="tab-item">
+                    <a href="#catalog-artist" class="tab-btn lang-text is-active-lang-text" data-path="painter"
+                      data-target="rus" tabindex="0">Бонсиньори, Франческо</a>
+                    <a href="#catalog-artist" class="tab-btn lang-text" data-path="painter" data-target="fra"
+                      tabindex="0">Bonsignori,
+                      Francesco</a>
+                    <a href="#catalog-artist" class="tab-btn lang-text" data-path="painter" data-target="deu"
+                      tabindex="0">Bonsignori,
+                      Francesco</a>
+                    <a href="#catalog-artist" class="tab-btn lang-text" data-path="painter" data-target="ita"
+                      tabindex="0">Bonsignori,
+                      Francesco</a>
+                    <a href="#catalog-artist" class="tab-btn lang-text" data-path="painter" data-target="bel"
+                      tabindex="0">Bonsignori,
+                      Francesco</a>
+                  </li>
+                  <li class="tab-item">
+                    <a href="#catalog-artist" class="tab-btn lang-text is-active-lang-text" data-path="painter"
+                      data-target="rus" tabindex="0">Боттичини, Рафаэлло</a>
+                    <a href="#catalog-artist" class="tab-btn lang-text" data-path="painter" data-target="fra"
+                      tabindex="0">Botticini,
+                      Rafaello</a>
+                    <a href="#catalog-artist" class="tab-btn lang-text" data-path="painter" data-target="deu"
+                      tabindex="0">Botticini,
+                      Rafaello</a>
+                    <a href="#catalog-artist" class="tab-btn lang-text" data-path="painter" data-target="ita"
+                      tabindex="0">Botticini,
+                      Rafaello</a>
+                    <a href="#catalog-artist" class="tab-btn lang-text" data-path="painter" data-target="bel"
+                      tabindex="0">Botticini,
+                      Rafaello</a>
+                  </li>
+                  <li class="tab-item">
+                    <a href="#catalog-artist" class="tab-btn lang-text is-active-lang-text" data-path="painter"
+                      data-target="rus" tabindex="0">Брамантино</a>
+                    <a href="#catalog-artist" class="tab-btn lang-text" data-path="painter" data-target="fra"
+                      tabindex="0">Bramantino</a>
+                    <a href="#catalog-artist" class="tab-btn lang-text" data-path="painter" data-target="deu"
+                      tabindex="0">Bramantino</a>
+                    <a href="#catalog-artist" class="tab-btn lang-text" data-path="painter" data-target="ita"
+                      tabindex="0">Bramantino</a>
+                    <a href="#catalog-artist" class="tab-btn lang-text" data-path="painter" data-target="bel"
+                      tabindex="0">Bramantino</a>
+                  </li>
+                  <li class="tab-item">
+                    <a href="#catalog-artist" class="tab-btn lang-text is-active-lang-text" data-path="painter"
+                      data-target="rus" tabindex="0">Бреа, Людовико</a>
+                    <a href="#catalog-artist" class="tab-btn lang-text" data-path="painter" data-target="fra"
+                      tabindex="0">Brea,
+                      Ludovico</a>
+                    <a href="#catalog-artist" class="tab-btn lang-text" data-path="painter" data-target="deu"
+                      tabindex="0">Brea,
+                      Ludovico</a>
+                    <a href="#catalog-artist" class="tab-btn lang-text" data-path="painter" data-target="ita"
+                      tabindex="0">Brea,
+                      Ludovico</a>
+                    <a href="#catalog-artist" class="tab-btn lang-text" data-path="painter" data-target="bel"
+                      tabindex="0">Brea,
+                      Ludovico</a>
+                  </li>
+                  <li class="tab-item">
+                    <a href="#catalog-artist" class="tab-btn lang-text is-active-lang-text" data-path="painter"
+                      data-target="rus" tabindex="0">Бьяджо д’Антонио Туччи</a>
+                    <a href="#catalog-artist" class="tab-btn lang-text" data-path="painter" data-target="fra"
+                      tabindex="0">Biagio
+                      dAntonio Tucci</a>
+                    <a href="#catalog-artist" class="tab-btn lang-text" data-path="painter" data-target="deu"
+                      tabindex="0">Biagio
+                      dAntonio Tucci</a>
+                    <a href="#catalog-artist" class="tab-btn lang-text" data-path="painter" data-target="ita"
+                      tabindex="0">Biagio
+                      dAntonio Tucci</a>
+                    <a href="#catalog-artist" class="tab-btn lang-text" data-path="painter" data-target="bel"
+                      tabindex="0">Biagio
+                      dAntonio Tucci</a>
+                  </li>
+                  <li class="tab-item">
+                    <a href="#catalog-artist" class="tab-btn lang-text is-active-lang-text" data-path="painter"
+                      data-target="rus" tabindex="0">Веккьетта</a>
+                    <a href="#catalog-artist" class="tab-btn lang-text" data-path="painter" data-target="fra"
+                      tabindex="0">Vecchietta</a>
+                    <a href="#catalog-artist" class="tab-btn lang-text" data-path="painter" data-target="deu"
+                      tabindex="0">Vecchietta</a>
+                    <a href="#catalog-artist" class="tab-btn lang-text" data-path="painter" data-target="ita"
+                      tabindex="0">Vecchietta</a>
+                    <a href="#catalog-artist" class="tab-btn lang-text" data-path="painter" data-target="bel"
+                      tabindex="0">Vecchietta</a>
+                  </li>
+                  <li class="tab-item">
+                    <a href="#catalog-artist" class="tab-btn lang-text is-active-lang-text" data-path="painter"
+                      data-target="rus" tabindex="0">Андреа Верроккьо</a>
+                    <a href="#catalog-artist" class="tab-btn lang-text" data-path="painter" data-target="fra"
+                      tabindex="0">Andrea
+                      Verrocchio</a>
+                    <a href="#catalog-artist" class="tab-btn lang-text" data-path="painter" data-target="deu"
+                      tabindex="0">Andrea
+                      Verrocchio</a>
+                    <a href="#catalog-artist" class="tab-btn lang-text" data-path="painter" data-target="ita"
+                      tabindex="0">Andrea
+                      Verrocchio</a>
+                    <a href="#catalog-artist" class="tab-btn lang-text" data-path="painter" data-target="bel"
+                      tabindex="0">Andrea
+                      Verrocchio</a>
+                  </li>
+                  <li class="tab-item">
+                    <a href="#catalog-artist" class="tab-btn lang-text is-active-lang-text is-active-tab-btn"
+                      data-path="ghirland" data-target="rus" tabindex="0">Доменико Гирландайо</a>
+                    <a href="#catalog-artist" class="tab-btn lang-text is-active-tab-btn" data-path="ghirland"
+                      data-target="fra" tabindex="0">Domenico Ghirlandaio</a>
+                    <a href="#catalog-artist" class="tab-btn lang-text is-active-tab-btn" data-path="ghirland"
+                      data-target="deu" tabindex="0">Domenico Ghirlandaio</a>
+                    <a href="#catalog-artist" class="tab-btn lang-text is-active-tab-btn" data-path="ghirland"
+                      data-target="ita" tabindex="0">Domenico Ghirlandaio</a>
+                    <a href="#catalog-artist" class="tab-btn lang-text is-active-tab-btn" data-path="ghirland"
+                      data-target="bel" tabindex="0">Domenico Ghirlandaio</a>
+                  </li>
+                  <li class="tab-item">
+                    <a href="#catalog-artist" class="tab-btn lang-text is-active-lang-text" data-path="painter"
+                      data-target="rus" tabindex="0">Беноццо Гоццоли</a>
+                    <a href="#catalog-artist" class="tab-btn lang-text" data-path="painter" data-target="fra"
+                      tabindex="0">Benozzo
+                      Gozzoli</a>
+                    <a href="#catalog-artist" class="tab-btn lang-text" data-path="painter" data-target="deu"
+                      tabindex="0">Benozzo
+                      Gozzoli</a>
+                    <a href="#catalog-artist" class="tab-btn lang-text" data-path="painter" data-target="ita"
+                      tabindex="0">Benozzo
+                      Gozzoli</a>
+                    <a href="#catalog-artist" class="tab-btn lang-text" data-path="painter" data-target="bel"
+                      tabindex="0">Benozzo
+                      Gozzoli</a>
+                  </li>
+                  <li class="tab-item">
+                    <a href="#catalog-artist" class="tab-btn lang-text is-active-lang-text" data-path="painter"
+                      data-target="rus" tabindex="0">Граначчи, Франческо</a>
+                    <a href="#catalog-artist" class="tab-btn lang-text" data-path="painter" data-target="fra"
+                      tabindex="0">Granacci,
+                      Francesco</a>
+                    <a href="#catalog-artist" class="tab-btn lang-text" data-path="painter" data-target="deu"
+                      tabindex="0">Granacci,
+                      Francesco</a>
+                    <a href="#catalog-artist" class="tab-btn lang-text" data-path="painter" data-target="ita"
+                      tabindex="0">Granacci,
+                      Francesco</a>
+                    <a href="#catalog-artist" class="tab-btn lang-text" data-path="painter" data-target="bel"
+                      tabindex="0">Granacci,
+                      Francesco</a>
+                  </li>
+                  <li class="tab-item">
+                    <a href="#catalog-artist" class="tab-btn lang-text is-active-lang-text" data-path="painter"
+                      data-target="rus" tabindex="0">Грегорио ди Чекко</a>
+                    <a href="#catalog-artist" class="tab-btn lang-text" data-path="painter" data-target="fra"
+                      tabindex="0">Gregorio di
+                      Cecco</a>
+                    <a href="#catalog-artist" class="tab-btn lang-text" data-path="painter" data-target="deu"
+                      tabindex="0">Gregorio di
+                      Cecco</a>
+                    <a href="#catalog-artist" class="tab-btn lang-text" data-path="painter" data-target="ita"
+                      tabindex="0">Gregorio di
+                      Cecco</a>
+                    <a href="#catalog-artist" class="tab-btn lang-text" data-path="painter" data-target="bel"
+                      tabindex="0">Gregorio di
+                      Cecco</a>
+                  </li>
+                  <li class="tab-item">
+                    <a href="#catalog-artist" class="tab-btn lang-text is-active-lang-text" data-path="painter"
+                      data-target="rus" tabindex="0">Джованни да Удине</a>
+                    <a href="#catalog-artist" class="tab-btn lang-text" data-path="painter" data-target="fra"
+                      tabindex="0">Giovanni da
+                      Udine</a>
+                    <a href="#catalog-artist" class="tab-btn lang-text" data-path="painter" data-target="deu"
+                      tabindex="0">Giovanni da
+                      Udine</a>
+                    <a href="#catalog-artist" class="tab-btn lang-text" data-path="painter" data-target="ita"
+                      tabindex="0">Giovanni da
+                      Udine</a>
+                    <a href="#catalog-artist" class="tab-btn lang-text" data-path="painter" data-target="bel"
+                      tabindex="0">Giovanni da
+                      Udine</a>
+                  </li>
+                  <li class="tab-item">
+                    <a href="#catalog-artist" class="tab-btn lang-text is-active-lang-text" data-path="painter"
+                      data-target="rus" tabindex="0">Джованни ди Паоло</a>
+                    <a href="#catalog-artist" class="tab-btn lang-text" data-path="painter" data-target="fra"
+                      tabindex="0">Giovanni di
+                      Paolo</a>
+                    <a href="#catalog-artist" class="tab-btn lang-text" data-path="painter" data-target="deu"
+                      tabindex="0">Giovanni di
+                      Paolo</a>
+                    <a href="#catalog-artist" class="tab-btn lang-text" data-path="painter" data-target="ita"
+                      tabindex="0">Giovanni di
+                      Paolo</a>
+                    <a href="#catalog-artist" class="tab-btn lang-text" data-path="painter" data-target="bel"
+                      tabindex="0">Giovanni di
+                      Paolo</a>
+                  </li>
+                  <li class="tab-item">
+                    <a href="#catalog-artist" class="tab-btn lang-text is-active-lang-text" data-path="painter"
+                      data-target="rus" tabindex="0">Джорджоне</a>
+                    <a href="#catalog-artist" class="tab-btn lang-text" data-path="painter" data-target="fra"
+                      tabindex="0">Giorgione</a>
+                    <a href="#catalog-artist" class="tab-btn lang-text" data-path="painter" data-target="deu"
+                      tabindex="0">Giorgione</a>
+                    <a href="#catalog-artist" class="tab-btn lang-text" data-path="painter" data-target="ita"
+                      tabindex="0">Giorgione</a>
+                    <a href="#catalog-artist" class="tab-btn lang-text" data-path="painter" data-target="bel"
+                      tabindex="0">Giorgione</a>
+                  </li>
+                  <li class="tab-item">
+                    <a href="#catalog-artist" class="tab-btn lang-text is-active-lang-text" data-path="painter"
+                      data-target="rus" tabindex="0">Парентино, Бернардо</a>
+                    <a href="#catalog-artist" class="tab-btn lang-text" data-path="painter" data-target="fra"
+                      tabindex="0">Parentino,
+                      Bernardo</a>
+                    <a href="#catalog-artist" class="tab-btn lang-text" data-path="painter" data-target="deu"
+                      tabindex="0">Parentino,
+                      Bernardo</a>
+                    <a href="#catalog-artist" class="tab-btn lang-text" data-path="painter" data-target="ita"
+                      tabindex="0">Parentino,
+                      Bernardo</a>
+                    <a href="#catalog-artist" class="tab-btn lang-text" data-path="painter" data-target="bel"
+                      tabindex="0">Parentino,
+                      Bernardo</a>
+                  </li>
+                  <li class="tab-item">
+                    <a href="#catalog-artist" class="tab-btn lang-text is-active-lang-text" data-path="painter"
+                      data-target="rus" tabindex="0">Пезеллино</a>
+                    <a href="#catalog-artist" class="tab-btn lang-text" data-path="painter" data-target="fra"
+                      tabindex="0">Pesellino</a>
+                    <a href="#catalog-artist" class="tab-btn lang-text" data-path="painter" data-target="deu"
+                      tabindex="0">Pesellino</a>
+                    <a href="#catalog-artist" class="tab-btn lang-text" data-path="painter" data-target="ita"
+                      tabindex="0">Pesellino</a>
+                    <a href="#catalog-artist" class="tab-btn lang-text" data-path="painter" data-target="bel"
+                      tabindex="0">Pesellino</a>
+                  </li>
+                  <li class="tab-item">
+                    <a href="#catalog-artist" class="tab-btn lang-text is-active-lang-text" data-path="painter"
+                      data-target="rus" tabindex="0">Пьетро Перуджино</a>
+                    <a href="#catalog-artist" class="tab-btn lang-text" data-path="painter" data-target="fra"
+                      tabindex="0">Pietro
+                      Perugino</a>
+                    <a href="#catalog-artist" class="tab-btn lang-text" data-path="painter" data-target="deu"
+                      tabindex="0">Pietro
+                      Perugino</a>
+                    <a href="#catalog-artist" class="tab-btn lang-text" data-path="painter" data-target="ita"
+                      tabindex="0">Pietro
+                      Perugino</a>
+                    <a href="#catalog-artist" class="tab-btn lang-text" data-path="painter" data-target="bel"
+                      tabindex="0">Pietro
+                      Perugino</a>
+                  </li>
+                  <li class="tab-item">
+                    <a href="#catalog-artist" class="tab-btn lang-text is-active-lang-text" data-path="painter"
+                      data-target="rus" tabindex="0">Перуцци, Бальдассаре</a>
+                    <a href="#catalog-artist" class="tab-btn lang-text" data-path="painter" data-target="fra"
+                      tabindex="0">Peruzzi,
+                      Baldassare</a>
+                    <a href="#catalog-artist" class="tab-btn lang-text" data-path="painter" data-target="deu"
+                      tabindex="0">Peruzzi,
+                      Baldassare</a>
+                    <a href="#catalog-artist" class="tab-btn lang-text" data-path="painter" data-target="ita"
+                      tabindex="0">Peruzzi,
+                      Baldassare</a>
+                    <a href="#catalog-artist" class="tab-btn lang-text" data-path="painter" data-target="bel"
+                      tabindex="0">Peruzzi,
+                      Baldassarea</a>
+                  </li>
+                  <li class="tab-item">
+                    <a href="#catalog-artist" class="tab-btn lang-text is-active-lang-text" data-path="painter"
+                      data-target="rus" tabindex="0">Пизанелло</a>
+                    <a href="#catalog-artist" class="tab-btn lang-text" data-path="painter" data-target="fra"
+                      tabindex="0">Pisanello</a>
+                    <a href="#catalog-artist" class="tab-btn lang-text" data-path="painter" data-target="deu"
+                      tabindex="0">Pisanello</a>
+                    <a href="#catalog-artist" class="tab-btn lang-text" data-path="painter" data-target="ita"
+                      tabindex="0">Pisanello</a>
+                    <a href="#catalog-artist" class="tab-btn lang-text" data-path="painter" data-target="bel"
+                      tabindex="0">Pisanello</a>
+                  </li>
+                  <li class="tab-item">
+                    <a href="#catalog-artist" class="tab-btn lang-text is-active-lang-text" data-path="painter"
+                      data-target="rus" tabindex="0">Пинтуриккьо</a>
+                    <a href="#catalog-artist" class="tab-btn lang-text" data-path="painter" data-target="fra"
+                      tabindex="0">Pinturicchio</a>
+                    <a href="#catalog-artist" class="tab-btn lang-text" data-path="painter" data-target="deu"
+                      tabindex="0">Pinturicchio</a>
+                    <a href="#catalog-artist" class="tab-btn lang-text" data-path="painter" data-target="ita"
+                      tabindex="0">Pinturicchio</a>
+                    <a href="#catalog-artist" class="tab-btn lang-text" data-path="painter" data-target="bel"
+                      tabindex="0">Pinturicchio</a>
+                  </li>
+                  <li class="tab-item tab-item-empty">
+                    <span class="tab-btn">Пустой</span>
+                  </li>
+                  <li class="tab-item tab-item-empty">
+                    <span class="tab-btn">Пустой</span>
+                  </li>
+                  <li class="tab-item tab-item-empty">
+                    <span class="tab-btn">Пустой</span>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="accordion__item">
+              <div class="accordion__name">
+                <h3 class="accordion__heading">
+                  <span class="lang-text is-active-lang-text" data-target="rus">C 1500 по 1599 гг.</span>
+                  <span class="lang-text" data-target="fra">De 1500 à 1599</span>
+                  <span class="lang-text" data-target="deu">Von 1500 bis 1599</span>
+                  <span class="lang-text" data-target="ita">Dal 1500 al 1599</span>
+                  <span class="lang-text" data-target="bel">Van 1500 tot 1599</span>
+                </h3>
+                <div class="accordion__btn">
+                  <svg class="big-corner">
+                    <use xlink:href="#big-corner"></use>
+                  </svg>
+                </div>
+              </div>
+              <div class="accordion__content">
+                <div class="accordion__content_empty">
+                  <div class="accordion__empty">
+
+                  </div>
+                  <div class="accordion__empty-text">
+                    <div class="lang-title">
+                      <span class="empty-title lang-text is-active-lang-text" data-target="rus">Здесь пока пусто</span>
+                      <span class="empty-title lang-text" data-target="fra">Ceci est vide pour linstant</span>
+                      <span class="empty-title lang-text" data-target="deu">Dies ist vorerst leer</span>
+                      <span class="empty-title lang-text" data-target="ita">Questo è vuoto per ora</span>
+                      <span class="empty-title lang-text" data-target="bel">Dit is voorlopig leeg</span>
+                    </div>
+                    <div class="lang-paragraph">
+                      <span class="empty-paragraph lang-text is-active-lang-text" data-target="rus">А в галерее вы
+                        всегда можете найти что-то интересное для себя</span>
+                      <span class="empty-paragraph lang-text" data-target="fra">Et dans la galerie, vous pouvez toujours
+                        trouver quelque chose dintéressant pour vous-même</span>
+                      <span class="empty-paragraph lang-text" data-target="deu">Und in der Galerie findet man immer
+                        etwas Interessantes für sich</span>
+                      <span class="empty-paragraph lang-text" data-target="ita">E nella galleria puoi sempre trovare
+                        qualcosa di interessante per te</span>
+                      <span class="empty-paragraph lang-text" data-target="bel">En in de galerij vind je altijd wel iets
+                        interessants voor jezelf</span>
+                    </div>
+                    <div class="lang-link">
+                      <a href="#gallery" class="empty-link lang-text is-active-lang-text" data-target="rus">В
+                        галерею</a>
+                      <a href="#gallery" class="empty-link lang-text" data-target="fra">To Gallery</a>
+                      <a href="#gallery" class="empty-link lang-text" data-target="deu">Zur Galerie</a>
+                      <a href="#gallery" class="empty-link lang-text" data-target="ita">Alla Galleria</a>
+                      <a href="#gallery" class="empty-link lang-text" data-target="bel">Naar Galerij</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="accordion__item">
+              <div class="accordion__name">
+                <h3 class="accordion__heading">
+                  <span class="lang-text is-active-lang-text" data-target="rus">C 1600 по 1699 гг.</span>
+                  <span class="lang-text" data-target="fra">De 1600 à 1699</span>
+                  <span class="lang-text" data-target="deu">Von 1600 bis 1699</span>
+                  <span class="lang-text" data-target="ita">Dal 1600 al 1699</span>
+                  <span class="lang-text" data-target="bel">Van 1600 tot 1699</span>
+                </h3>
+                <div class="accordion__btn">
+                  <svg class="big-corner">
+                    <use xlink:href="#big-corner"></use>
+                  </svg>
+                </div>
+              </div>
+              <div class="accordion__content">
+                <div class="accordion__content_empty">
+                  <div class="accordion__empty">
+
+                  </div>
+                  <div class="accordion__empty-text">
+                    <div class="lang-title">
+                      <span class="empty-title lang-text is-active-lang-text" data-target="rus">Здесь пока
+                        пусто</span>
+                      <span class="empty-title lang-text" data-target="fra">Ceci est vide pour linstant</span>
+                      <span class="empty-title lang-text" data-target="deu">Dies ist vorerst leer</span>
+                      <span class="empty-title lang-text" data-target="ita">Questo è vuoto per ora</span>
+                      <span class="empty-title lang-text" data-target="bel">Dit is voorlopig leeg</span>
+                    </div>
+                    <div class="lang-paragraph">
+                      <span class="empty-paragraph lang-text is-active-lang-text" data-target="rus">А в галерее вы
+                        всегда можете найти что-то интересное для себя</span>
+                      <span class="empty-paragraph lang-text" data-target="fra">Et dans la galerie, vous pouvez
+                        toujours trouver quelque chose dintéressant pour vous-même</span>
+                      <span class="empty-paragraph lang-text" data-target="deu">Und in der Galerie findet man immer
+                        etwas Interessantes für sich</span>
+                      <span class="empty-paragraph lang-text" data-target="ita">E nella galleria puoi sempre trovare
+                        qualcosa di interessante per te</span>
+                      <span class="empty-paragraph lang-text" data-target="bel">En in de galerij vind je altijd wel
+                        iets interessants voor jezelf</span>
+                    </div>
+                    <div class="lang-link">
+                      <a href="#gallery" class="empty-link lang-text is-active-lang-text" data-target="rus">В
+                        галерею</a>
+                      <a href="#gallery" class="empty-link lang-text" data-target="fra">To Gallery</a>
+                      <a href="#gallery" class="empty-link lang-text" data-target="deu">Zur Galerie</a>
+                      <a href="#gallery" class="empty-link lang-text" data-target="ita">Alla Galleria</a>
+                      <a href="#gallery" class="empty-link lang-text" data-target="bel">Naar Galerij</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="accordion__item">
+              <div class="accordion__name">
+                <h3 class="accordion__heading">
+                  <span class="lang-text is-active-lang-text" data-target="rus">C 1700 по 1799 гг.</span>
+                  <span class="lang-text" data-target="fra">De 1700 à 1799</span>
+                  <span class="lang-text" data-target="deu">Von 1700 bis 1799</span>
+                  <span class="lang-text" data-target="ita">Dal 1700 al 1799</span>
+                  <span class="lang-text" data-target="bel">Van 1700 tot 1799</span>
+                </h3>
+                <div class="accordion__btn">
+                  <svg class="big-corner">
+                    <use xlink:href="#big-corner"></use>
+                  </svg>
+                </div>
+              </div>
+              <div class="accordion__content">
+                <div class="accordion__content_empty">
+                  <div class="accordion__empty">
+
+                  </div>
+                  <div class="accordion__empty-text">
+                    <div class="lang-title">
+                      <span class="empty-title lang-text is-active-lang-text" data-target="rus">Здесь пока
+                        пусто</span>
+                      <span class="empty-title lang-text" data-target="fra">Ceci est vide pour linstant</span>
+                      <span class="empty-title lang-text" data-target="deu">Dies ist vorerst leer</span>
+                      <span class="empty-title lang-text" data-target="ita">Questo è vuoto per ora</span>
+                      <span class="empty-title lang-text" data-target="bel">Dit is voorlopig leeg</span>
+                    </div>
+                    <div class="lang-paragraph">
+                      <span class="empty-paragraph lang-text is-active-lang-text" data-target="rus">А в галерее вы
+                        всегда можете найти что-то интересное для себя</span>
+                      <span class="empty-paragraph lang-text" data-target="fra">Et dans la galerie, vous pouvez
+                        toujours trouver quelque chose dintéressant pour vous-même</span>
+                      <span class="empty-paragraph lang-text" data-target="deu">Und in der Galerie findet man immer
+                        etwas Interessantes für sich</span>
+                      <span class="empty-paragraph lang-text" data-target="ita">E nella galleria puoi sempre trovare
+                        qualcosa di interessante per te</span>
+                      <span class="empty-paragraph lang-text" data-target="bel">En in de galerij vind je altijd wel
+                        iets interessants voor jezelf</span>
+                    </div>
+                    <div class="lang-link">
+                      <a href="#gallery" class="empty-link lang-text is-active-lang-text" data-target="rus">В
+                        галерею</a>
+                      <a href="#gallery" class="empty-link lang-text" data-target="fra">To Gallery</a>
+                      <a href="#gallery" class="empty-link lang-text" data-target="deu">Zur Galerie</a>
+                      <a href="#gallery" class="empty-link lang-text" data-target="ita">Alla Galleria</a>
+                      <a href="#gallery" class="empty-link lang-text" data-target="bel">Naar Galerij</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="accordion__item">
+              <div class="accordion__name">
+                <h3 class="accordion__heading">
+                  <span class="lang-text is-active-lang-text" data-target="rus">C 1800 по 1899 гг.</span>
+                  <span class="lang-text" data-target="fra">De 1800 à 1899</span>
+                  <span class="lang-text" data-target="deu">Von 1800 bis 1899</span>
+                  <span class="lang-text" data-target="ita">Dal 1800 al 1899</span>
+                  <span class="lang-text" data-target="bel">Van 1800 tot 1899</span>
+                </h3>
+                <div class="accordion__btn">
+                  <svg class="big-corner">
+                    <use xlink:href="#big-corner"></use>
+                  </svg>
+                </div>
+              </div>
+              <div class="accordion__content">
+                <div class="accordion__content_empty">
+                  <div class="accordion__empty">
+
+                  </div>
+                  <div class="accordion__empty-text">
+                    <div class="lang-title">
+                      <span class="empty-title lang-text is-active-lang-text" data-target="rus">Здесь пока
+                        пусто</span>
+                      <span class="empty-title lang-text" data-target="fra">Ceci est vide pour linstant</span>
+                      <span class="empty-title lang-text" data-target="deu">Dies ist vorerst leer</span>
+                      <span class="empty-title lang-text" data-target="ita">Questo è vuoto per ora</span>
+                      <span class="empty-title lang-text" data-target="bel">Dit is voorlopig leeg</span>
+                    </div>
+                    <div class="lang-paragraph">
+                      <span class="empty-paragraph lang-text is-active-lang-text" data-target="rus">А в галерее вы
+                        всегда можете найти что-то интересное для себя</span>
+                      <span class="empty-paragraph lang-text" data-target="fra">Et dans la galerie, vous pouvez
+                        toujours trouver quelque chose dintéressant pour vous-même</span>
+                      <span class="empty-paragraph lang-text" data-target="deu">Und in der Galerie findet man immer
+                        etwas Interessantes für sich</span>
+                      <span class="empty-paragraph lang-text" data-target="ita">E nella galleria puoi sempre trovare
+                        qualcosa di interessante per te</span>
+                      <span class="empty-paragraph lang-text" data-target="bel">En in de galerij vind je altijd wel
+                        iets interessants voor jezelf</span>
+                    </div>
+                    <div class="lang-link">
+                      <a href="#gallery" class="empty-link lang-text is-active-lang-text" data-target="rus">В
+                        галерею</a>
+                      <a href="#gallery" class="empty-link lang-text" data-target="fra">To Gallery</a>
+                      <a href="#gallery" class="empty-link lang-text" data-target="deu">Zur Galerie</a>
+                      <a href="#gallery" class="empty-link lang-text" data-target="ita">Alla Galleria</a>
+                      <a href="#gallery" class="empty-link lang-text" data-target="bel">Naar Galerij</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="accordion__item">
+              <div class="accordion__name">
+                <h3 class="accordion__heading lang">
+                  <span class="lang-text is-active-lang-text" data-target="rus">C 1900 по 1999 гг.</span>
+                  <span class="lang-text" data-target="fra">De 1900 à 1999</span>
+                  <span class="lang-text" data-target="deu">Von 1900 bis 1999</span>
+                  <span class="lang-text" data-target="ita">Dal 1900 al 1999</span>
+                  <span class="lang-text" data-target="bel">Van 1900 tot 1999</span>
+                </h3>
+                <div class="accordion__btn">
+                  <svg class="big-corner">
+                    <use xlink:href="#big-corner"></use>
+                  </svg>
+                </div>
+              </div>
+              <div class="accordion__content">
+                <div class="accordion__content_empty">
+                  <div class="accordion__empty">
+
+                  </div>
+                  <div class="accordion__empty-text">
+                    <div class="lang-title">
+                      <span class="empty-title lang-text is-active-lang-text" data-target="rus">Здесь пока
+                        пусто</span>
+                      <span class="empty-title lang-text" data-target="fra">Ceci est vide pour linstant</span>
+                      <span class="empty-title lang-text" data-target="deu">Dies ist vorerst leer</span>
+                      <span class="empty-title lang-text" data-target="ita">Questo è vuoto per ora</span>
+                      <span class="empty-title lang-text" data-target="bel">Dit is voorlopig leeg</span>
+                    </div>
+                    <div class="lang-paragraph">
+                      <span class="empty-paragraph lang-text is-active-lang-text" data-target="rus">А в галерее вы
+                        всегда можете найти что-то интересное для себя</span>
+                      <span class="empty-paragraph lang-text" data-target="fra">Et dans la galerie, vous pouvez
+                        toujours trouver quelque chose dintéressant pour vous-même</span>
+                      <span class="empty-paragraph lang-text" data-target="deu">Und in der Galerie findet man immer
+                        etwas Interessantes für sich</span>
+                      <span class="empty-paragraph lang-text" data-target="ita">E nella galleria puoi sempre trovare
+                        qualcosa di interessante per te</span>
+                      <span class="empty-paragraph lang-text" data-target="bel">En in de galerij vind je altijd wel
+                        iets interessants voor jezelf</span>
+                    </div>
+                    <div class="lang-link">
+                      <a href="#gallery" class="empty-link lang-text is-active-lang-text" data-target="rus">В
+                        галерею</a>
+                      <a href="#gallery" class="empty-link lang-text" data-target="fra">To Gallery</a>
+                      <a href="#gallery" class="empty-link lang-text" data-target="deu">Zur Galerie</a>
+                      <a href="#gallery" class="empty-link lang-text" data-target="ita">Alla Galleria</a>
+                      <a href="#gallery" class="empty-link lang-text" data-target="bel">Naar Galerij</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="accordion__item">
+              <div class="accordion__name">
+                <h3 class="accordion__heading lang">
+                  <span class="lang-text is-active-lang-text" data-target="rus">C 2000 г.</span>
+                  <span class="lang-text" data-target="fra">De 2000</span>
+                  <span class="lang-text" data-target="deu">Von 2000</span>
+                  <span class="lang-text" data-target="ita">Dal 2000</span>
+                  <span class="lang-text" data-target="bel">Van 2000</span>
+                </h3>
+                <div class="accordion__btn">
+                  <svg class="big-corner">
+                    <use xlink:href="#big-corner"></use>
+                  </svg>
+                </div>
+              </div>
+              <div class="accordion__content">
+                <div class="accordion__content_empty">
+                  <div class="accordion__empty">
+
+                  </div>
+                  <div class="accordion__empty-text">
+                    <div class="lang-title">
+                      <span class="empty-title lang-text is-active-lang-text" data-target="rus">Здесь пока
+                        пусто</span>
+                      <span class="empty-title lang-text" data-target="fra">Ceci est vide pour linstant</span>
+                      <span class="empty-title lang-text" data-target="deu">Dies ist vorerst leer</span>
+                      <span class="empty-title lang-text" data-target="ita">Questo è vuoto per ora</span>
+                      <span class="empty-title lang-text" data-target="bel">Dit is voorlopig leeg</span>
+                    </div>
+                    <div class="lang-paragraph">
+                      <span class="empty-paragraph lang-text is-active-lang-text" data-target="rus">А в галерее вы
+                        всегда можете найти что-то интересное для себя</span>
+                      <span class="empty-paragraph lang-text" data-target="fra">Et dans la galerie, vous pouvez
+                        toujours trouver quelque chose dintéressant pour vous-même</span>
+                      <span class="empty-paragraph lang-text" data-target="deu">Und in der Galerie findet man immer
+                        etwas Interessantes für sich</span>
+                      <span class="empty-paragraph lang-text" data-target="ita">E nella galleria puoi sempre trovare
+                        qualcosa di interessante per te</span>
+                      <span class="empty-paragraph lang-text" data-target="bel">En in de galerij vind je altijd wel
+                        iets interessants voor jezelf</span>
+                    </div>
+                    <div class="lang-link">
+                      <a href="#gallery" class="empty-link lang-text is-active-lang-text" data-target="rus">В
+                        галерею</a>
+                      <a href="#gallery" class="empty-link lang-text" data-target="fra">To Gallery</a>
+                      <a href="#gallery" class="empty-link lang-text" data-target="deu">Zur Galerie</a>
+                      <a href="#gallery" class="empty-link lang-text" data-target="ita">Alla Galleria</a>
+                      <a href="#gallery" class="empty-link lang-text" data-target="bel">Naar Galerij</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EVENTS -->
+
+  <section class="events" id="events">
+    <div class="container events__container">
+      <h2 class="section-heading events__heading">
+        События
+      </h2>
+      <div class="events__swiper-container">
+        <ul class="events__list" aria-label="Список событий">
+          <li class="events__item">
+            <article class="card">
+              <div class="card__img_box">
+                <img src="img/events/engraving.jpg" alt="гравюра" class="card__img">
+              </div>
+              <div class="card__descr">
+                <span class="card__mark">Музей им. Щусева <br>
+                  с 20 марта по 30 апреля</span>
+                <h3 class="card__title">
+                  Книжная гравюра в живом восприятии
+                </h3>
+                <p class="paragraph card__paragraph">
+                  Один из ведущих флорентийских художников Кватроченто, основатель художественной династии, которую
+                  продолжили его брат Давид и сын Ридольфо.
+                </p>
+                <a href="" class="card__link">Подробнее</a>
+              </div>
+            </article>
+          </li>
+          <li class="events__item">
+            <article class="card">
+              <div class="card__img_box">
+                <img src="img/events/petrov.jpg" alt="Петров и Ильин" class="card__img">
+              </div>
+              <div class="card__descr">
+                <span class="card__mark">ММОМА <br>
+                  24 марта 19:00</span>
+                <h3 class="card__title">
+                  «Открытая дискуссия». Дмитрий Петров и Сергей Ильин.
+                </h3>
+                <p class="paragraph card__paragraph">
+                  Высокий уровень вовлечения представителей целевой аудитории является четким доказательством простого
+                  факта.
+                </p>
+                <a href="" class="card__link">Подробнее</a>
+              </div>
+            </article>
+          </li>
+          <li class="events__item">
+            <article class="card">
+              <div class="card__img_box">
+                <img src="img/events/formation.jpg" alt="Выставка Формация" class="card__img">
+              </div>
+              <div class="card__descr">
+                <span class="card__mark">Еврейский музей<br>
+                  с 31 марта по 21 апреля</span>
+                <h3 class="card__title">
+                  Выставка «Формация 2020»
+                </h3>
+                <p class="paragraph card__paragraph">
+                  Идейные соображения высшего порядка, а также современная методология разработки играет важную роль в
+                  формировании глубокомысленных рассуждений.
+                </p>
+                <a href="" class="card__link">Подробнее</a>
+              </div>
+            </article>
+          </li>
+          <li class="events__item">
+            <article class="card">
+              <div class="card__img_box">
+                <img src="img/events/young.jpg" alt="ленточки" class="card__img">
+              </div>
+              <div class="card__descr">
+                <span class="card__mark">Третьяковка на Крымском валу<br>
+                  с 30 марта по 30 апреля</span>
+                <h3 class="card__title">
+                  XXIV Международная биеннале молодого искусства
+                </h3>
+                <p class="paragraph card__paragraph">
+                  Внезапно, реплицированные с зарубежных источников, современные исследования.
+                </p>
+                <a href="" class="card__link">Подробнее</a>
+              </div>
+            </article>
+          </li>
+          <li class="events__item">
+            <article class="card">
+              <div class="card__img_box">
+                <img src="img/events/silver.jpg" alt="фольга" class="card__img">
+              </div>
+              <div class="card__descr">
+                <span class="card__mark">ММАМ<br>
+                  с 8 апреля по 20 мая</span>
+                <h3 class="card__title">
+                  Джон Винзор. Фотографии из серии «Метафора серебра»
+                </h3>
+                <p class="paragraph card__paragraph">
+                  Один из ведущих флорентийских художников Кватроченто, основатель художественной династии, которую
+                  продолжили его брат Давид и сын Ридольфо.
+                </p>
+                <a href="" class="card__link">Подробнее</a>
+              </div>
+            </article>
+          </li>
+        </ul>
+        <div class="swiper-pagination events__swiper-pagination"></div>
+      </div>
+      <div class="events__btn_box">
+        <button class="btn events__btn">
+          Все события
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- EDITIONS -->
+
+  <section class="editions" id="editions">
+    <div class="container editions__container">
+      <div class="editions__left">
+        <h2 class="section-heading editions__heading">
+          Издания
+        </h2>
+        <div class="check-block">
+          <h3 class="block-title check-block-title">Категории</h3>
+          <ul class="check-list" id="check1" aria-label="Список категорий. Чекбоксы">
+            <li class="check-item">
+              <label class="check-label">
+                <input type="checkbox" class="checkbox visually-hidden">
+                <span class="check-custom"></span>
+                <span class="check-text">Бестселлеры</span>
+              </label>
+            </li>
+            <li class="check-item">
+              <label class="check-label">
+                <input type="checkbox" class="checkbox visually-hidden">
+                <span class="check-custom"></span>
+                <span class="check-text">Искусство</span>
+              </label>
+            </li>
+            <li class="check-item">
+              <label class="check-label">
+                <input type="checkbox" class="checkbox visually-hidden">
+                <span class="check-custom"></span>
+                <span class="check-text">Архитектура</span>
+              </label>
+            </li>
+            <li class="check-item">
+              <label class="check-label">
+                <input type="checkbox" class="checkbox visually-hidden" checked>
+                <span class="check-custom"></span>
+                <span class="check-text">Дизайн</span>
+              </label>
+            </li>
+            <li class="check-item">
+              <label class="check-label">
+                <input type="checkbox" class="checkbox visually-hidden">
+                <span class="check-custom"></span>
+                <span class="check-text">Мода</span>
+              </label>
+            </li>
+            <li class="check-item">
+              <label class="check-label">
+                <input type="checkbox" class="checkbox visually-hidden">
+                <span class="check-custom"></span>
+                <span class="check-text">Детям</span>
+              </label>
+            </li>
+            <li class="check-item">
+              <label class="check-label">
+                <input type="checkbox" class="checkbox visually-hidden">
+                <span class="check-custom"></span>
+                <span class="check-text">Художественная литература</span>
+              </label>
+            </li>
+            <li class="check-item">
+              <label class="check-label">
+                <input type="checkbox" class="checkbox visually-hidden">
+                <span class="check-custom"></span>
+                <span class="check-text">Публицистика</span>
+              </label>
+            </li>
+            <li class="check-item">
+              <label class="check-label">
+                <input type="checkbox" class="checkbox visually-hidden">
+                <span class="check-custom"></span>
+                <span class="check-text">Путеводители</span>
+              </label>
+            </li>
+            <li class="check-item">
+              <label class="check-label">
+                <input type="checkbox" class="checkbox visually-hidden">
+                <span class="check-custom"></span>
+                <span class="check-text">Философия</span>
+              </label>
+            </li>
+            <li class="check-item">
+              <label class="check-label">
+                <input type="checkbox" class="checkbox visually-hidden">
+                <span class="check-custom"></span>
+                <span class="check-text">Учебная литература</span>
+              </label>
+            </li>
+            <li class="check-item">
+              <label class="check-label">
+                <input type="checkbox" class="checkbox visually-hidden">
+                <span class="check-custom"></span>
+                <span class="check-text">Журналы и газеты</span>
+              </label>
+            </li>
+          </ul>
+        </div>
+        <div class="price-block">
+          <h3 class="block-title price-block-title">Цена</h3>
+          <div class="price-input-block">
+            <span class="price__mark left-bord">От</span>
+            <label>
+              <input type="number" class="price__input" placeholder="50">
+            </label>
+            <span class="price__mark">до</span>
+            <label>
+              <input type="number" class="price__input" placeholder="25000">
+            </label>
+            <span class="price__mark right-bord">руб.</span>
+          </div>
+        </div>
+      </div>
+      <div class="editions__right">
+        <div>
+          <div class="swiper-controls editions__swiper-controls">
+            <div class="swiper-button-style swiper-button-prev-style editions-swiper-button-prev swiper-button-prev">
+              <svg class="corner">
+                <use xlink:href="#corner"></use>
+              </svg>
+            </div>
+            <div class="swiper-pagination-style editions-swiper-pagination"></div>
+            <div class="swiper-button-style swiper-button-next-style editions-swiper-button-next swiper-button-next">
+              <svg class="corner">
+                <use xlink:href="#corner"></use>
+              </svg>
+            </div>
+          </div>
+          <div class="editions__right_content editions__swiper-container swiper">
+            <ul class="editions__list swiper-wrapper" aria-label="Список изданий">
+              <li class="editions__swiper-slide swiper-slide">
+                <div class="editions__picture">
+                  <img src="img/editions/artOfColor.jpg" alt="Картина">
+                </div>
+                <div class="editions__info">
+                  <h3 class="block-title block-title_book">
+                    <span class="block-title_bold">Искусство цвета</span>
+                    <span class="block-title_normal">Иттен, Иоханнес</span>
+                  </h3>
+                  <span class="edition__price">
+                    620 руб
+                  </span>
+                </div>
+                <button class="btn editions__btn">Заказать</button>
+              </li>
+              <li class="editions__swiper-slide swiper-slide">
+                <div class="editions__picture">
+                  <img src="img/editions/typograph.jpg" alt="Картина">
+                </div>
+                <div class="editions__info">
+                  <h3 class="block-title block-title_book">
+                    <span class="block-title_bold">Типографика</span>
+                    <span class="block-title_normal">Рудер, Эмиль</span>
+                  </h3>
+                  <span class="edition__price">
+                    2450 руб
+                  </span>
+                </div>
+                <button class="btn editions__btn">Заказать</button>
+              </li>
+              <li class="editions__swiper-slide swiper-slide">
+                <div class="editions__picture">
+                  <img src="img/editions/lettersBook.jpg" alt="Картина">
+                </div>
+                <div class="editions__info">
+                  <h3 class="block-title block-title_book">
+                    <span class="block-title_bold">Книга про буквы</span>
+                    <span class="block-title_normal">Гордон, Юрий</span>
+                  </h3>
+                  <span class="edition__price">
+                    2200 руб
+                  </span>
+                </div>
+                <button class="btn editions__btn">Заказать</button>
+              </li>
+              <li class="editions__swiper-slide swiper-slide">
+                <div class="editions__picture">
+                  <img src="img/editions/nikolayIlyin.jpg" alt="Картина">
+                </div>
+                <div class="editions__info">
+                  <h3 class="block-title block-title_book">
+                    <span class="block-title_bold">Николай Ильин</span>
+                    <span class="block-title_normal">Кричевский, Владимир</span>
+                  </h3>
+                  <span class="edition__price">
+                    1100 руб
+                  </span>
+                </div>
+                <button class="btn editions__btn">Заказать</button>
+              </li>
+              <li class="editions__swiper-slide swiper-slide">
+                <div class="editions__picture">
+                  <img src="img/editions/modalGrids.jpg" alt="Картина">
+                </div>
+                <div class="editions__info">
+                  <h3 class="block-title block-title_book">
+                    <span class="block-title_bold">Модульные сетки в графичеком дизайне</span>
+                    <span class="block-title_normal">Мюллер-Брокманн, Йозеф</span>
+                  </h3>
+                  <span class="edition__price">
+                    1450 руб
+                  </span>
+                </div>
+                <button class="btn editions__btn">Заказать</button>
+              </li>
+              <li class="editions__swiper-slide swiper-slide">
+                <div class="editions__picture">
+                  <img src="img/editions/styleEvolution.jpg" alt="Картина">
+                </div>
+                <div class="editions__info">
+                  <h3 class="block-title block-title_book">
+                    <span class="block-title_bold">Эволюция графических стилей</span>
+                    <span class="block-title_normal">Хеллер, Чваст</span>
+                  </h3>
+                  <span class="edition__price">
+                    3200 руб
+                  </span>
+                </div>
+                <button class="btn editions__btn">Заказать</button>
+              </li>
+              <li class="editions__swiper-slide swiper-slide">
+                <div class="editions__picture">
+                  <img src="img/editions/artAndVisual.jpg" alt="Картина">
+                </div>
+                <div class="editions__info">
+                  <h3 class="block-title block-title_book">
+                    <span class="block-title_bold">Искусство и визуальное воприятие</span>
+                    <span class="block-title_normal">Арнхейм, Рудольф</span>
+                  </h3>
+                  <span class="edition__price">
+                    2200 руб
+                  </span>
+                </div>
+                <button class="btn editions__btn">Заказать</button>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <span></span>
+  <!-- PROJECTS -->
+
+  <section class="projects" id="projects">
+    <div class="container projects__container">
+      <h2 class="section-heading project__heading">
+        Проекты
+      </h2>
+      <p class="paragraph project__paragraph">
+        Предварительные выводы: постоянное информационно-пропагандистское обеспечение нашей деятельности однозначно
+        фиксирует необходимость своевременного выполнения сверхзадачи. А ещё независимые государства смешаны с не
+        уникальными данными до степени совершенной неузнаваемости, из&#8209;за чего возрастает их статус бесполезности.
+        Прежде всего, постоянное <span class="non-def">информационно&#8209;пропагандистское</span> <span
+          class="us-def">информационно-пропагандистское</span>
+        <span class="tooltip">
+          <button id="tip1" class="tooltip__marker" tabindex="0" aria-label="Подсказка">
+            <!-- marker image -->
+          </button>
+        </span>
+        обеспечение нашей деятельности однозначно фиксирует
+        необходимость экономической целесообразности принимаемых решений. И нет сомнений, что действия представителей
+        оппозиции могут быть рассмотрены
+        <span class="tooltip">
+          <button id="tip2" class="tooltip__marker" tabindex="0" aria-label="Подсказка">
+            <!-- marker image -->
+          </button>
+        </span>
+        исключительно в разрезе маркетинговых и финансовых
+        <span class="tooltip">
+          <button id="tip3" class="tooltip__marker" tabindex="0" aria-label="Подсказка">
+            <!-- marker image -->
+          </button>
+        </span>
+        предпосылок. Банальные, но
+        неопровержимые выводы, а также представители современных социальных резервов призывают нас к новым свершениям,
+        которые, в свою очередь, должны быть смешаны с не уникальными данными до степени совершенной неузнаваемости.
+        Подробнее: <a href="" class="project__paragraph_link">blanchard&#8209;art.ru/projects/about</a>
+      </p>
+      <div class="partner">
+        <h3 class="partner__title">
+          Партнеры проектов:
+        </h3>
+        <div class="partner__swiper-container swiper">
+          <ul class="swiper-wrapper partner__swiper-wrapper" aria-label="Список партнеров проекта">
+            <li class="partner__swiper-slide swiper-slide">
+              <a href="https://freelandsfoundation.co.uk/" class="partner__link" target="_blank">
+                <img src="img/projects/freelands.png" alt="Логотип компании Freelands Foundation" class="partner__logo">
+              </a>
+            </li>
+            <li class="partner__swiper-slide swiper-slide">
+              <a href="https://icavcu.org/" class="partner__link" target="_blank">
+                <img src="img/projects/contenporaryArt.png" alt="Логотип компании Institute for Contenporary Art"
+                  class="partner__logo">
+              </a>
+            </li>
+            <li class="partner__swiper-slide swiper-slide">
+              <a href="https://www.workhousearts.org/" class="partner__link" target="_blank">
+                <img src="img/projects/workhouse.png" alt="Логотип компании Workhouse Art Center" class="partner__logo">
+              </a>
+            </li>
+            <li class="partner__swiper-slide swiper-slide">
+              <a href="https://www.1849wine.com/" class="partner__link" target="_blank">
+                <img src="img/projects/1849wine.png" alt="Логотип компании 1849 wine co." class="partner__logo">
+              </a>
+            </li>
+            <li class="partner__swiper-slide swiper-slide">
+              <a href="https://www.hiscox.co.uk/" class="partner__link" target="_blank">
+                <img src="img/projects/hiscox.png" alt="Логотип компании Hiscox" class="partner__logo">
+              </a>
+            </li>
+            <li class="partner__swiper-slide swiper-slide">
+              <a href="https://camdenartcentre.org/" class="partner__link" target="_blank">
+                <img src="img/projects/camden.png" alt="Логотип компании Camden Arts Centre" class="partner__logo">
+              </a>
+            </li>
+            <li class="partner__swiper-slide swiper-slide">
+              <a href="http://www.stassen.be/" class="partner__link" target="_blank">
+                <img src="img/projects/stassen.png" alt="Логотип компании Stassen" class="partner__logo">
+              </a>
+            </li>
+            <li class="partner__swiper-slide swiper-slide">
+              <a href="https://www.wattsgallery.org.uk/" class="partner__link" target="_blank">
+                <img src="img/projects/watts.png" alt="Логотип компании Watts Gallery Artist Village"
+                  class="partner__logo">
+              </a>
+            </li>
+            <li class="partner__swiper-slide swiper-slide">
+              <a href="https://esad-dentaire.com/" class="partner__link" target="_blank">
+                <img src="img/projects/esad.png" alt="Логотип компании Esad" class="partner__logo">
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="swiper-button-style swiper-button-prev-style partner-swiper-button partner-swiper-button-prev swiper-button-prev">
+          <svg class="corner">
+            <use xlink:href="#corner"></use>
+          </svg>
+        </div>
+        <div class="swiper-button-style swiper-button-next-style partner-swiper-button partner-swiper-button-next swiper-button-next">
+          <svg class="corner">
+            <use xlink:href="#corner"></use>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACTS -->
+
+  <section class="contacts" id="contacts">
+    <div class="container contacts__container">
+      <h2 class="section-heading contacts__heading">Контакты</h2>
+      <div class="adress-block adress-block-760">
+        <h3 class="contacts__block-title adress-title">
+          Шоурум №2
+        </h3>
+        <address class="adress">Леонтьевский переулок, дом 5/1</address>
+      </div>
+    </div>
+    <div class="contacts__content">
+      <div class="contacts__left">
+        <div class="contacts__wrapper">
+          <div class="adress-block adress-block-1920">
+            <h3 class="contacts__block-title adress-title">
+              Шоурум №2
+            </h3>
+            <address class="adress">Леонтьевский переулок, дом 5/1</address>
+          </div>
+          <form action="https://jsonplaceholder.typicode.com/posts" method="POST" class="form js-form">
+
+            <span class="contacts__block-title form__title">
+              Заказать обратный звонок
+            </span>
+            <div class="form-group">
+              <label for="name"></label>
+              <input type="text" id="name" name="name" placeholder="Имя*" class="form__input form-control"
+                autocomplete="off" data-validate-field="name" aria-label="Введите имя, используя русский алфавит">
+            </div>
+
+            <div class="form-group">
+              <label for="tel"></label>
+              <input type="tel" id="tel" name="phone-number" placeholder="Телефон*" class="form__input form-control"
+                autocomplete="off" data-validate-field="tel" aria-label="Введите номер телефона">
+            </div>
+
+            <button class="btn form__btn" type="submit">
+              Заказать
+            </button>
+          </form>
+
+          <div class="contacts__social">
+            <h3 class="contacts__block-title social-title">
+              Связаться в один клик
+            </h3>
+            <a href="https://www.whatsapp.com/?lang=ru" class="whatsapp contacts__social_link" target="_blank"
+              aria-label="вацап">
+
+            </a>
+            <a href="https://web.telegram.org/k/" class="telegram contacts__social_link" target="_blank"
+              aria-label="телеграм">
+
+            </a>
+          </div>
+        </div>
+      </div>
+      <div id="map" class="map">
+
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container footer__container">
+      <a href="" class="logo footer__logo">
+        <img src="img/logo.svg" alt="Blanchard" class="logo-img" aria-label="Логотип сайта">
+      </a>
+      <ul class="social-list" aria-label="Ссылки на социальные сети">
+        <li class="social-item">
+          <a href="https://vk.com/" class="social-link vk" target="_blank" aria-label="В контакте">
+            <svg width="45" height="45" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M22.5 0C10.074 0 0 10.0736 0 22.5C0 34.9264 10.074 45 22.5 45C34.926 45 45 34.9264 45 22.5C45 10.0736 34.926 0 22.5 0ZM33.9132 24.9335C34.9619 25.9577 36.0714 26.9217 37.0128 28.0519C37.4299 28.5519 37.823 29.0688 38.1222 29.6503C38.5495 30.4794 38.1637 31.3886 37.4216 31.4379L32.812 31.4369C31.6215 31.5354 30.6741 31.0553 29.8754 30.2414C29.2378 29.5927 28.6462 28.8999 28.0321 28.2292C27.7812 27.9539 27.517 27.6947 27.2021 27.4907C26.5737 27.0819 26.0277 27.2072 25.6677 27.8636C25.3008 28.5316 25.217 29.2719 25.182 30.0153C25.1319 31.1022 24.8041 31.3863 23.7135 31.4374C21.3832 31.5465 19.1721 31.1929 17.117 30.0181C15.3041 28.9818 13.901 27.5193 12.6783 25.8634C10.2973 22.6353 8.47381 19.0924 6.8354 15.4478C6.46665 14.627 6.73642 14.1878 7.64194 14.1707C9.14639 14.1417 10.6508 14.1454 12.1553 14.1694C12.7676 14.179 13.1727 14.5294 13.4079 15.1071C14.2209 17.1074 15.2176 19.0105 16.4665 20.7755C16.7994 21.2455 17.1391 21.7142 17.623 22.0461C18.157 22.4125 18.5639 22.2915 18.8158 21.6953C18.9769 21.3164 19.0464 20.9113 19.0814 20.5053C19.2011 19.1145 19.2153 17.7242 19.0082 16.339C18.8793 15.4722 18.3918 14.9124 17.5277 14.7485C17.0876 14.6652 17.152 14.5022 17.3661 14.2508C17.7376 13.8163 18.0856 13.5474 18.7812 13.5474L23.9893 13.5465C24.8101 13.7076 24.9942 14.0759 25.1056 14.9027L25.1102 20.6903C25.1006 21.0103 25.2709 21.9586 25.8454 22.1681C26.3058 22.32 26.6096 21.9508 26.8849 21.6594C28.1339 20.334 29.0237 18.7697 29.8206 17.1506C30.1723 16.4366 30.4757 15.6978 30.7703 14.9575C30.9895 14.4101 31.3301 14.1408 31.9479 14.15L36.9631 14.156C37.1108 14.156 37.2609 14.1574 37.4073 14.1827C38.2525 14.3273 38.4841 14.6909 38.2226 15.5154C37.811 16.8109 37.0114 17.89 36.2297 18.9718C35.3919 20.1301 34.4983 21.2478 33.6687 22.4111C32.9064 23.4746 32.9667 24.01 33.9132 24.9335Z"
+                fill="#CACACA" />
+            </svg>
+          </a>
+        </li>
+        <li class="social-item">
+          <a href="https://www.instagram.com/?hl=ru" class="social-link insta" target="_blank"
+            aria-label="инстаграмм">
+            <svg width="45" height="45" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M18.1172 22.5C18.1172 24.8785 20.0453 26.8066 22.4238 26.8066C24.8024 26.8066 26.7305 24.8785 26.7305 22.5C26.7305 20.1215 24.8024 18.1934 22.4238 18.1934C20.0453 18.1934 18.1172 20.1215 18.1172 22.5Z"
+                fill="#CACACA" />
+              <path
+                d="M12.3521 14.8803C12.5591 14.3194 12.8894 13.8116 13.3185 13.3948C13.7353 12.9656 14.2428 12.6354 14.8041 12.4283C15.2593 12.2515 15.9432 12.0411 17.2029 11.9837C18.5655 11.9216 18.9741 11.9082 22.4238 11.9082C25.8738 11.9082 26.2824 11.9212 27.6447 11.9834C28.9044 12.0411 29.5886 12.2515 30.0435 12.4283C30.6048 12.6354 31.1126 12.9656 31.5291 13.3948C31.9582 13.8116 32.2885 14.319 32.4959 14.8803C32.6727 15.3356 32.8831 16.0198 32.9405 17.2795C33.0026 18.6418 33.016 19.0503 33.016 22.5004C33.016 25.9501 33.0026 26.3587 32.9405 27.7213C32.8831 28.981 32.6727 29.6649 32.4959 30.1201C32.2885 30.6814 31.9586 31.1889 31.5294 31.6057C31.1126 32.0348 30.6052 32.3651 30.0438 32.5721C29.5886 32.7493 28.9044 32.9597 27.6447 33.0171C26.2824 33.0792 25.8742 33.0922 22.4241 33.0922C18.9737 33.0922 18.5652 33.0792 17.2032 33.0171C15.9436 32.9597 15.2593 32.7493 14.8041 32.5721C13.6773 32.1375 12.7867 31.2469 12.3521 30.1201C12.1753 29.6649 11.9648 28.981 11.9071 27.7213C11.845 26.3587 11.8319 25.9501 11.8319 22.5004C11.8319 19.0503 11.845 18.6418 11.9071 17.2795C11.9645 16.0198 12.1749 15.3356 12.3521 14.8803ZM22.4238 29.1344C26.0881 29.1344 29.0585 26.1643 29.0585 22.5001C29.0585 18.8358 26.0881 15.8657 22.4238 15.8657C18.7599 15.8657 15.7894 18.8358 15.7894 22.5001C15.7894 26.1643 18.7599 29.1344 22.4238 29.1344ZM15.5271 17.1538C16.3834 17.1538 17.0776 16.4596 17.0776 15.6034C17.0776 14.7471 16.3834 14.0529 15.5271 14.0529C14.6709 14.0529 13.9767 14.7471 13.9767 15.6034C13.977 16.4596 14.6709 17.1538 15.5271 17.1538Z"
+                fill="#CACACA" />
+              <path
+                d="M22.6204 0C34.9364 0 44.9238 9.98747 44.9238 22.3034C44.9238 34.6194 34.9364 44.6069 22.6204 44.6069C10.3044 44.6069 0.316959 34.6194 0.316959 22.3034C0.316959 9.98747 10.3044 0 22.6204 0ZM9.89059 27.5836C9.95253 28.9469 10.1693 29.8777 10.4858 30.6924C11.1512 32.4127 12.5111 33.7727 14.2314 34.438C15.0458 34.7545 15.9769 34.971 17.3399 35.0332C18.7057 35.0955 19.1419 35.1105 22.6201 35.1105C26.0985 35.1105 26.5345 35.0955 27.9005 35.0332C29.2635 34.971 30.1946 34.7545 31.009 34.438C31.8639 34.1164 32.6378 33.6124 33.2776 32.9607C33.929 32.3212 34.433 31.547 34.7546 30.6924C35.0711 29.878 35.2879 28.9469 35.3498 27.5839C35.4128 26.2178 35.4274 25.7815 35.4274 22.3034C35.4274 18.8253 35.4128 18.389 35.3502 17.0233C35.2883 15.66 35.0718 14.7292 34.7553 13.9145C34.4337 13.0599 33.9293 12.2857 33.2776 11.6462C32.6382 10.9945 31.8639 10.4905 31.0094 10.1689C30.1946 9.85236 29.2638 9.63592 27.9005 9.57364C26.5348 9.51136 26.0985 9.49638 22.6204 9.49638C19.1423 9.49638 18.706 9.51136 17.3403 9.57398C15.9769 9.63592 15.0462 9.85236 14.2314 10.1685C13.3769 10.4901 12.6026 10.9945 11.9628 11.6462C11.3114 12.286 10.8071 13.0599 10.4858 13.9145C10.169 14.7292 9.95253 15.66 9.89025 17.0233C9.82798 18.389 9.81334 18.8253 9.81334 22.3034C9.81334 25.7815 9.82798 26.2178 9.89059 27.5836Z"
+                fill="#CACACA" />
+            </svg>
+          </a>
+        </li>
+        <li class="social-item">
+          <a href="https://ru-ru.facebook.com/" class="social-link fb" target="_blank" aria-label="фейсбук">
+            <svg width="45" height="45" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M22.5 0C10.125 0 0 10.1431 0 22.6355C0 33.9307 8.23499 43.3057 18.99 45V29.1867H13.275V22.6355H18.99V17.6431C18.99 11.9729 22.3425 8.85542 27.495 8.85542C29.9475 8.85542 32.5125 9.28464 32.5125 9.28464V14.8645H29.6775C26.8875 14.8645 26.01 16.6039 26.01 18.3886V22.6355H32.265L31.2525 29.1867H26.01V45C31.312 44.1593 36.1399 41.4432 39.6223 37.342C43.1047 33.2408 45.012 28.0248 44.9999 22.6355C44.9999 10.1431 34.875 0 22.5 0Z"
+                fill="#CACACA" />
+            </svg>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </footer>
+
+  <!-- *******JS******* -->
+
+  <!-- Choices -->
+  <script src="js/choices.min.js"></script>
+
+  <!-- map -->
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=ваш API-ключ&lang=ru_RU" type="text/javascript">
+  </script>
+
+  <!-- Validate form -->
+  <script src="js/just-validate.min.js"></script>
+
+  <!-- Phone mask -->
+  <script src="js/inputmask.min.js"></script>
+
+  <!-- swiper js -->
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+  <!-- ScrollBar -->
+  <script src="https://unpkg.com/simplebar@latest/dist/simplebar.min.js"></script>
+
+  <!-- Tippy.js -->
+  <script src="https://unpkg.com/@popperjs/core@2"></script>
+  <script src="https://unpkg.com/tippy.js@6"></script>
+
+  <!-- Script js -->
+  <script src="js/jquery.min.js"></script>
+  <script src="js/swipers.js"></script>
+  <script src="js/tabs.js"></script>
+  <script src="js/script.js"></script>
+
+  <!-- accordion js -->
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+</body>
+
+</html>
