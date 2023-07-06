@@ -994,6 +994,11 @@ a {
   border: 2px solid var(--black);
 }
 
+.swiper-button-prev svg, .swiper-button-next svg{
+  width: 14px;
+  height: 9px;
+}
+
 .swiper-button-prev-style {
   left: 0;
 }
